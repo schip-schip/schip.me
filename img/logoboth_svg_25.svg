@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="81px" height="25px" viewBox="0 0 81 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.8.3 (29802) - http://www.bohemiancoding.com/sketch -->
+    <title>logoboth_svg_25</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="3.6" y="5.6" width="16.8" height="16.8" rx="0.600000024"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-14" transform="translate(-318.000000, -37.000000)">
+            <g id="logomark_svg_28" transform="translate(318.000000, 35.000000)">
+                <text id="Schip" font-family="Athelas-Regular, Athelas" font-size="24" font-weight="normal" fill="#0CADF6">
+                    <tspan x="25" y="21">Schip</tspan>
+                </text>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#0CADF6" transform="translate(12.000000, 14.000000) rotate(-315.000000) translate(-12.000000, -14.000000) " xlink:href="#path-1"></use>
+                <path d="M7.95765981,16.014279 C6.48506642,11.6632938 6.66452777,9.80480212 6.76866711,8.79181018 C6.88133826,7.69582693 7.66695357,6.33196417 8.24303015,6.50700533 C8.64256182,6.62840323 8.84878122,6.8029903 9.14233667,6.60450333 C9.43589212,6.40601637 9.04837619,2.37505451 9.04837619,2.37505451 C9.04837619,2.37505451 11.5717451,8.03067195 10.8053735,9.17746342 C10.0496054,10.3083878 8.46871381,7.50661121 8.84878126,9.50805088 C9.04052167,10.5177582 9.1866678,11.6463891 10.8053733,15.3879861 C12.4240788,19.1295831 13.0253828,19.3366283 13.0253828,19.3366283 L9.86328121,20.9636918 C9.86328121,20.9636918 9.43025321,20.3652642 7.95765981,16.014279 Z" id="Triangle-15" fill="#FDFEFF" mask="url(#mask-2)" transform="translate(9.863281, 11.669373) rotate(251.000000) translate(-9.863281, -11.669373) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
