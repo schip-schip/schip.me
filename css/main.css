@@ -325,14 +325,14 @@ section {
 .intro-table-1 {
 	background-image: url('../img/serviceText.png');
 }
-.intro-table-hover:hover .intro-table-1 , .intro-table-hover.hover .intro-table-1 {
+.intro-table-1 .intro-table-hover:hover , .intro-table-1 .intro-table-hover.hover {
 	background-image: url('../img/serviceText-hover.png');
 }
 
 .intro-table-2 {
 	background-image: url('../img/serviceText.png');
 }
-.intro-table-hover:hover .intro-table-2 , .intro-table-hover.hover .intro-table-2 {
+.intro-table-2 .intro-table-hover:hover , .intro-table-2 .intro-table-hover.hover {
 	background-image: url('../img/serviceText-hover.png');
 }
 
