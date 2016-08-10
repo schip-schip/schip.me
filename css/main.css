@@ -1122,7 +1122,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .navbar-brand > img {
 	height: 54px;
 }
-@media(max-width:768px){
+@media(max-width:767px){
 	.navbar-brand > img {
     	height: 50px;
 }
