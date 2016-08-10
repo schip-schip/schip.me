@@ -330,10 +330,10 @@ section {
 }
 
 .intro-table-2 {
-	background-image: url('../img/serviceText.png');
+	background-image: url('../img/serviceClass.png');
 }
-.intro-table-2 .intro-table-hover:hover , .intro-table-2 .intro-table-hover.hover {
-	background-image: url('../img/serviceText-hover.png');
+.intro-table-2:hover , .intro-table-2.hover {
+	background-image: url('../img/serviceClass-hover.png');
 }
 
 .intro-table-3 {
