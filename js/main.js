@@ -1,4 +1,4 @@
-// ********************* TEMPLATE ORIGINAL *********************
+// ********************* MOBILE TAP *********************
 (
 	function () {
 		var tapClass = "";
@@ -47,6 +47,7 @@
 		Hover().bind("hover", "tap");
 	}
 )();
+// ********************* END OF MOBILE TAP *********************
 // ********************* TEMPLATE ORIGINAL *********************
 jQuery(function($) {
 	"use strict";
