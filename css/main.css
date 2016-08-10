@@ -1119,9 +1119,8 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	}
 }
 /********************************/
-.navbar-brand {
-	height: 6vw;
-	max-height: 60px;
+.navbar-brand > img {
+    height: 50px;
 }
 .intro-table-hover .hide-hover{
 	-webkit-transform: none;
