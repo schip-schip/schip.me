@@ -275,9 +275,18 @@
 	</section> -->
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
-			<div class="modal-content modal-popup">
+			<form class="formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post">
+				<label>お名前</label>
+				<input name="お名前" type="text" required>
+				<label>メールアドレス</label>
+				<input name="メールアドレス" type="email" required>
+				<label>お問い合わせ</label>
+				<textarea name="お問い合わせ"></textarea>
+				<button type="submit">送信</button>
+			</form>
+<!-- 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">申し訳ありません。コンタクトフォームは準備中です。</h3>
+				<h3 class="white">申し訳ありません。コンタクトフォームは準備中です。</h3> -->
 <!-- 				<form action="" class="popup-form">
 					<input type="text" class="form-control form-white" placeholder="Full Name">
 					<input type="text" class="form-control form-white" placeholder="Email Address">
@@ -340,6 +349,7 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/typewriter.js"></script>
 	<script src="js/jquery.onepagenav.js"></script>
+	<script src="https://sdk.form.run/js/v1/sdk.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
