@@ -282,19 +282,14 @@
 				<h4 class="white">Contact Form</h4>
 				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post">
 					<div id="fmInpt">
-						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前" required>
-						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス" required>
-						<textarea name="お問い合わせ" class="form-control form-white" placeholder="お問い合わせ内容"></textarea>
+						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前" id="inptNm" required>
+						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス" id="inptMA" required>
+						<textarea name="お問い合わせ" class="form-control form-white" placeholder="お問い合わせ内容" id="inptCntnt"></textarea>
 						<button class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</button>
 					</div>
 					<div class="hidden white" id="fmCnfm">
 						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
-						<p class="white">お名前</p>
-						<p class="white"></p>
-						<p class="white">メールアドレス</p>
-						<p class="white"></p>
-						<p class="white">お問い合わせ内容</p>
-						<p class="white"></p>
+						<div id="dvFmCnfm"></div>
 						<button type="submit" class="btn btn-submit" id="btnFmSbmt">送信</button>
 						<button class="btn" id="btnFmCrrct">訂正する</button>
 					</div>

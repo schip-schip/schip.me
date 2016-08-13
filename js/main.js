@@ -52,10 +52,21 @@
 $(document).on('click','#btnFmCnfm',function(){
 	$("#fmInpt").addClass("hidden");
 	$("#fmCnfm").removeClass("hidden");
+	$("#fmInpt>.form-control").each( function() {
+		var title = $(this).attr("name");
+		var val = $(this).val;
+		$('#dvFmCnfm').append('<p class="white">'+title+'</p>');
+		$('#dvFmCnfm').append('<p class="white">'+val+'</p>');
+	});
+});
+$(document).on('click','#btnFmCrrct',function(){
+	$("#fmCnfm").addClass("hidden");
+	$("#fmInpt").removeClass("hidden");
+	$("#dvFmCnfm").empty();
 });
 $(document).on('click','#btnFmSbmt',function(){
 	$("#fmCnfm").addClass("hidden");
-	$("#fmCnfm").removeClass("hidden");
+	$("#fmTnks").removeClass("hidden");
 	setTimeout(function(){
     	$('#modal1').modal('hide')
 	},4000);
