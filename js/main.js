@@ -70,7 +70,7 @@ $(document).on('click','#btnFmSbmt',function(){
 	$("#fmTnks").removeClass("hidden");
 	$('#fmInpt>input,textarea').val('');
 	setTimeout(function(){
-    	$('#modal1').modal('hide')
+    	$('#modal1').modal('hide');
 		$("#fmTnks").addClass("hidden");
 		$("#fmInpt").removeClass("hidden");
 	},4000);
