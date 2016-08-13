@@ -282,9 +282,9 @@
 				<h4 class="white">Contact Form</h4>
 				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post">
 					<div id="fmInpt">
-						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前" id="inptNm" required>
-						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス" id="inptMA" required>
-						<textarea name="お問い合わせ" class="form-control form-white" placeholder="お問い合わせ内容" id="inptCntnt"></textarea>
+						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前" required>
+						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス" required>
+						<textarea name="お問い合わせ内容" class="form-control form-white" placeholder="お問い合わせ内容"></textarea>
 						<button class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</button>
 					</div>
 					<div class="hidden white" id="fmCnfm">
@@ -294,7 +294,7 @@
 						<button class="btn" id="btnFmCrrct">訂正する</button>
 					</div>
 					<div class="hidden" id="fmTnks">
-						<p>正常に送信されました。ありがとうございました。</p>
+						<p class="white">正常に送信されました。ありがとうございました。</p>
 					</div>
 				</form>
 			</div>

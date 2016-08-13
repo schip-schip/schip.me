@@ -55,6 +55,7 @@ $(document).on('click','#btnFmCnfm',function(){
 	$("#fmInpt>.form-control").each( function() {
 		var title = $(this).attr("name");
 		var val = $(this).val();
+		val = val.replace(/\n/g, "<br />");
 		$('#dvFmCnfm').append('<p class="white">'+title+'</p>');
 		$('#dvFmCnfm').append('<p class="white">'+val+'</p>');
 	});
@@ -67,6 +68,7 @@ $(document).on('click','#btnFmCrrct',function(){
 $(document).on('click','#btnFmSbmt',function(){
 	$("#fmCnfm").addClass("hidden");
 	$("#fmTnks").removeClass("hidden");
+	$('#fmInpt>input,textarea').val('');
 	setTimeout(function(){
     	$('#modal1').modal('hide')
 	},4000);
