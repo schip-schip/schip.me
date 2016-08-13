@@ -54,7 +54,7 @@ $(document).on('click','#btnFmCnfm',function(){
 	$("#fmCnfm").removeClass("hidden");
 	$("#fmInpt>.form-control").each( function() {
 		var title = $(this).attr("name");
-		var val = $(this).val;
+		var val = $(this).val();
 		$('#dvFmCnfm').append('<p class="white">'+title+'</p>');
 		$('#dvFmCnfm').append('<p class="white">'+val+'</p>');
 	});
