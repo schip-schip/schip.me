@@ -71,6 +71,8 @@ $(document).on('click','#btnFmSbmt',function(){
 	$('#fmInpt>input,textarea').val('');
 	setTimeout(function(){
     	$('#modal1').modal('hide')
+		$("#fmTnks").addClass("hidden");
+		$("#fmInpt").removeClass("hidden");
 	},4000);
 });
 // ********************* END OF CONTACT FROM *********************
