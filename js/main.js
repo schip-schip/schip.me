@@ -48,6 +48,12 @@
 	}
 )();
 // ********************* END OF MOBILE TAP *********************
+// ********************* CONTACT FROM *********************
+$(document).on('click','#btnFmCnfm',function(){
+	$("#fmInpt").addClass("hidden");
+	$("#fmCnfm").removeClass("hidden");
+}
+// ********************* END OF CONTACT FROM *********************
 // ********************* TEMPLATE ORIGINAL *********************
 jQuery(function($) {
 	"use strict";
