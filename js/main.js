@@ -71,6 +71,7 @@ $(document).on('click','#btnFmSbmt',function(){
 	$("#fmCnfm").addClass("hidden");
 	$("#fmTnks").removeClass("hidden");
 	$('#fmInpt>input,textarea').val('');
+	$("#dvFmCnfm").empty();
 	setTimeout(function(){
     	$('#modal1').modal('hide');
 		$("#fmTnks").addClass("hidden");
