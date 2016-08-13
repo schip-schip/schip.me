@@ -287,16 +287,19 @@
 						<textarea name="お問い合わせ" class="form-control form-white" placeholder="お問い合わせ内容"></textarea>
 						<button class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</button>
 					</div>
-					<div class="hidden" id="fmCnfm">
-						<p>以下の内容で送信しますが、よろしいですか？</p>
-						<p>お名前</p>
-						<p></p>
-						<p>メールアドレス</p>
-						<p></p>
-						<p>お問い合わせ内容</p>
-						<p></p>
+					<div class="hidden white" id="fmCnfm">
+						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
+						<p class="white">お名前</p>
+						<p class="white"></p>
+						<p class="white">メールアドレス</p>
+						<p class="white"></p>
+						<p class="white">お問い合わせ内容</p>
+						<p class="white"></p>
+						<button type="submit" class="btn btn-submit" id="btnFmSbmt">送信</button>
 						<button class="btn" id="btnFmCrrct">訂正する</button>
-						<button type="submit" class="btn btn-submit">送信</button>
+					</div>
+					<div class="hidden" id="fmTnks">
+						<p>正常に送信されました。ありがとうございました。</p>
 					</div>
 				</form>
 			</div>

@@ -53,6 +53,13 @@ $(document).on('click','#btnFmCnfm',function(){
 	$("#fmInpt").addClass("hidden");
 	$("#fmCnfm").removeClass("hidden");
 });
+$(document).on('click','#btnFmSbmt',function(){
+	$("#fmCnfm").addClass("hidden");
+	$("#fmCnfm").removeClass("hidden");
+	setTimeout(function(){
+    	$('#modal1').modal('hide')
+	},4000);
+});
 // ********************* END OF CONTACT FROM *********************
 // ********************* TEMPLATE ORIGINAL *********************
 jQuery(function($) {
