@@ -59,11 +59,13 @@ $(document).on('click','#btnFmCnfm',function(){
 		$('#dvFmCnfm').append('<p class="white">'+title+'</p>');
 		$('#dvFmCnfm').append('<p class="white">'+val+'</p>');
 	});
+	$('#fmCntct').attr('novalidate','novalidate');
 });
 $(document).on('click','#btnFmCrrct',function(){
 	$("#fmCnfm").addClass("hidden");
 	$("#fmInpt").removeClass("hidden");
 	$("#dvFmCnfm").empty();
+	$('#fmCntct').removeAttr('novalidate');
 });
 $(document).on('click','#btnFmSbmt',function(){
 	$("#fmCnfm").addClass("hidden");
