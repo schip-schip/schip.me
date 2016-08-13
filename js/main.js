@@ -68,10 +68,10 @@ $(document).on('click','#btnFmCrrct',function(){
 $(document).on('click','#btnFmSbmt',function(){
 	$("#fmCnfm").addClass("hidden");
 	$("#fmTnks").removeClass("hidden");
-	$('#fmInpt>input,textarea').val('');
 	$("#dvFmCnfm").empty();
 	setTimeout(function(){
     	$('#modal1').modal('hide');
+		$('#fmInpt>input,textarea').val('');
 		$("#fmTnks").addClass("hidden");
 		$("#fmInpt").removeClass("hidden");
 	},4000);
