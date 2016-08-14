@@ -1125,6 +1125,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 @media(max-width:767px){
 	.navbar-brand > img {
     	height: 50px;
+	}
 }
 .intro-table-hover .hide-hover{
 	-webkit-transform: none;
@@ -1136,9 +1137,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .services-mark{
 	position: absolute;
 	bottom: 0;
-}
-#btnCntctTpFoot{
-	margin: 10px 0;
 }
 #dvFmCnfm{
 	margin-top: 45px;
