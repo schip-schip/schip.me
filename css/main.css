@@ -1129,17 +1129,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
     	height: 50px;
 	}
 }
-.intro-table-hover .hide-hover{
-	-webkit-transform: none;
-	transform: none;
-}
-.intro-table-hover:hover .expand, .intro-table-hover.hover .expand {
-    margin-top: 80px;
-}
-.services-mark{
-	position: absolute;
-	bottom: 0;
-}
 /************* END OF CUSTOMIZE CARDIO TEMPLATE *************/
 /************* ORIGINAL *************/
 #dvFmCnfm{
@@ -1147,8 +1136,5 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 }
 #btnFmCrrct{
 	margin-top: 30px;
-}
-#fmInpt.form-control.form-white{
-	:placeholder-shown
 }
 /************* END OF ORIGINAL *************/
