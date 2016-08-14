@@ -1130,8 +1130,8 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	}
 }
 .modal-popup{
-	overflow-y: auto;
-    max-height: 70%;
+	overflow: scroll;
+    max-height: 80vh;
 }
 /************* END OF CUSTOMIZE CARDIO TEMPLATE *************/
 /************* ORIGINAL *************/
