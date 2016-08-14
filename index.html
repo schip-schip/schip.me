@@ -279,22 +279,22 @@
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h4 class="white">Contact Form</h4>
+				<h4 class="white">ご連絡フォーム</h4>
 				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" id="fmCntct" novalidate>
 					<div id="fmInpt">
 						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前">
 						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス">
-						<textarea name="お問い合わせ内容" class="form-control form-white" placeholder="お問い合わせ内容"></textarea>
+						<textarea name="お問い合わせ内容" class="form-control form-white" rows="6" placeholder="お問い合わせ内容"></textarea>
 						<button class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</button>
 					</div>
 					<div class="hidden white" id="fmCnfm">
 						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
 						<div id="dvFmCnfm"></div>
 						<button type="submit" class="btn btn-submit" id="btnFmSbmt">送信</button>
-						<button class="btn" id="btnFmCrrct">訂正する</button>
+						<button class="btn btn-blue" id="btnFmCrrct">訂正する</button>
 					</div>
 					<div class="hidden" id="fmTnks">
-						<p class="white">正常に送信されました。ありがとうございました。</p>
+						<p class="white">正常に送信されました。ありがとうございました。なお、ご連絡には返信できかねる場合がございます。予めご了承ください。</p>
 					</div>
 				</form>
 			</div>
