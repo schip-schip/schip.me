@@ -56,8 +56,7 @@ $(document).on('click','#btnFmCnfm',function(){
 		var title = $(this).attr("name");
 		var val = $(this).val();
 		val = val.replace(/\n/g, "<br />");
-		$('#dvFmCnfm').append('<p class="white">'+title+'</p>');
-		$('#dvFmCnfm').append('<span class="form-control form-white">'+val+'</span>');
+		$('#dvFmCnfm').append('<p class="white">'+title+'</p><span class="form-control form-white">'+val+'</span>');
 	});
 });
 $(document).on('click','#btnFmCrrct',function(){
