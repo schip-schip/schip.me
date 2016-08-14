@@ -1,3 +1,4 @@
+/************* CARDIO TEMPLATE *************/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 body {
 	font-family: -apple-system, ‘Helvetica Neue’, ‘Hiragino Kaku Gothic ProN’, ‘游ゴシック Medium’, 'Roboto', ‘メイリオ’, meiryo, sans-serif;
@@ -1118,7 +1119,8 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 		padding-top: 0;
 	}
 }
-/********************************/
+/************* END OF CARDIO TEMPLATE *************/
+/************* CUSTOMIZE CARDIO TEMPLATE *************/
 .navbar-brand > img {
 	height: 54px;
 }
@@ -1138,10 +1140,15 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	position: absolute;
 	bottom: 0;
 }
+/************* END OF CUSTOMIZE CARDIO TEMPLATE *************/
+/************* ORIGINAL *************/
 #dvFmCnfm{
 	margin-top: 45px;
 }
 #btnFmCrrct{
 	margin-top: 30px;
 }
-/********************************/
+#fmInpt.form-control.form-white{
+	:placeholder-shown
+}
+/************* END OF ORIGINAL *************/
