@@ -1141,11 +1141,16 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 #btnFmCrrct{
 	margin-top: 30px;
 }
-.preload{
+#preload_serviceText-hover_png{
 	width: 0px;
 	height: 0px;
 	display: inline;
 	background-image: url('../img/serviceText-hover.png');
+}
+#preload_serviceClass-hover_png{
+	width: 0px;
+	height: 0px;
+	display: inline;
 	background-image: url('../img/serviceClass-hover.png');
 }
 /************* END OF ORIGINAL Index.html *************/
