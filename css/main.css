@@ -1134,11 +1134,32 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
     max-height: 80vh;
 }
 /************* END OF CUSTOMIZE CARDIO TEMPLATE *************/
-/************* ORIGINAL *************/
+/************* ORIGINAL Index.html *************/
 #dvFmCnfm{
 	margin-top: 45px;
 }
 #btnFmCrrct{
 	margin-top: 30px;
 }
-/************* END OF ORIGINAL *************/
+/************* END OF ORIGINAL Index.html *************/
+/************* ORIGINAL other *************/
+.navbar-nav > li > a.selected {
+	border-bottom: solid 2px #0CADF6;
+}
+header.service-page{
+	 height: 40vh !important;
+}
+header.service-page .table{
+    padding-top: 25px;
+}
+.paragraph{
+    margin-bottom: 90px;
+}
+.paragraph>p{
+	color: #36383a;
+    margin-bottom: 20px;
+}
+.img-80{
+	width: 80%;
+	height: auto;
+}
