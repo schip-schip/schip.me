@@ -326,15 +326,9 @@ section {
 .intro-table-1 {
 	background-image: url('../img/serviceText.png');
 }
-.intro-table-1:hover , .intro-table-1 .hover {
-	background-image: url('../img/serviceText-hover.png');
-}
 
 .intro-table-2 {
 	background-image: url('../img/serviceClass.png');
-}
-.intro-table-2:hover , .intro-table-2.hover {
-	background-image: url('../img/serviceClass-hover.png');
 }
 
 .intro-table-3 {
