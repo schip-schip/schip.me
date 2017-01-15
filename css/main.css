@@ -543,10 +543,22 @@ section {
 	z-index: 2;
 	margin-top: -60px;
 	border-radius: 50%;
+	width: 160px;
 }
 
 .team .title {
 	margin: 50px 0;
+}
+.team .links{
+	display: flex;
+	justify-content: center;
+	margin: 0 50px;
+}
+.team .links a{
+	margin: 0 8px;
+}
+.team .links i{
+	font-size: 24px;
 }
 /* Pricing */
 
@@ -1139,13 +1151,13 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	width: 0px;
 	height: 0px;
 	display: inline;
-	background-image: url('../img/serviceText-hover.png');
+	/*background-image: url('../img/serviceText-hover.png');*/
 }
 #preload_serviceClass-hover_png{
 	width: 0px;
 	height: 0px;
 	display: inline;
-	background-image: url('../img/serviceClass-hover.png');
+	/*background-image: url('../img/serviceClass-hover.png');*/
 }
 /************* END OF ORIGINAL Index.html *************/
 /************* ORIGINAL other *************/
@@ -1168,4 +1180,7 @@ header.service-page .table{
 .img-80{
 	width: 80%;
 	height: auto;
+}
+.margin-side-24px{
+	margin: 0 24px;
 }
