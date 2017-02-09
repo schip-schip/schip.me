@@ -7,9 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#0CADF6">
-	<title>Schip 解くから問うへ</title>
-	<meta name="description" content="解く人から問う人へ 人類の可能性を信じるSchip 教育と学習" />
-	<meta name=”keywords” content=”勉強,教育,知性,学習,東大,受験“>
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{{ page.description }}" />
+	<meta name=”keywords” content="{{ page.kw }}">
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
@@ -53,20 +53,84 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand"><img src="img/logoboth.png" alt="Schipロゴ"></a>
+				<a href="/" class="navbar-brand"><img src="img/logoboth.png" alt="Schipロゴ"></a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#services-mark">Services</a></li>
-					<li><a href="#mission">Mission</a></li>
-					<li><a href="#team">Member</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Contact</a></li>
+					{{ page.list1 }}
+					{{ page.list2 }}
+					{{ page.list3 }}
+					<li><a data-toggle="modal" data-target="#modal1" class="btn btn-blue">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-{{ content }}
+	{{ content }}
 
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
+				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+				<h4 class="white">ご連絡フォーム</h4>
+				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" id="fmCntct" novalidate>
+					<div id="fmInpt">
+						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前">
+						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス">
+						<textarea name="お問い合わせ内容" class="form-control form-white" rows="6" placeholder="お問い合わせ内容"></textarea>
+						<span class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
+					</div>
+					<div class="hidden" id="fmCnfm">
+						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
+						<div id="dvFmCnfm"></div>
+						<button type="submit" class="btn btn-submit" id="btnFmSbmt">送信</button>
+						<span class="btn btn-blue" id="btnFmCrrct">訂正する</span>
+					</div>
+					<div class="hidden" id="fmTnks">
+						<p class="white">正常に送信されました。ありがとうございました。なお、ご連絡には返信できかねる場合がございます。予めご了承ください。</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 text-center">
+					<h3 class="white">お気軽にご連絡ください</h3>
+					<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue" id="btnCntctTpFoot">コンタクトフォームを開く</a>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center-mobile">
+				<div class="col-sm-8">
+					<p>&copy; 2017 Schip All Rights Reserved.</p>
+				</div>
+				<div class="col-sm-4 text-right text-center-mobile">
+					<ul class="social-footer">
+						<li><a href="https://www.facebook.com/schipedu/" target=”_blank”><i class="fa fa-facebook"></i></a></li>
+						<li><a href="https://twitter.com/schip__" target=”_blank”><i class="fa fa-twitter"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Holder for mobile navigation -->
+	<div class="mobile-nav">
+		<ul>
+		</ul>
+		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+	</div>
+	<!-- Preload -->
+	<div id="preload_serviceText-hover_png"></div>
+	<div id="preload_serviceClass-hover_png"></div>
+	<!-- Scripts -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.32/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/typewriter.js"></script>
+	<script src="js/jquery.onepagenav.js"></script>
+	<script src="https://sdk.form.run/js/v1/sdk.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
