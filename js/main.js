@@ -149,8 +149,7 @@ jQuery(function($) {
 		$('.navbar.navbar-fixed-top .navbar-nav').onePageNav({
 			currentClass: 'active',
 			changeHash: false,
-			scrollSpeed: 400,
-			filter: ':not(.btn)'
+			scrollSpeed: 400
 		});
 	});
 	//***************************************************** END OF Window Load *****************************************************
@@ -193,6 +192,7 @@ jQuery(function($) {
 	});
 
 	$('body').on('click', '.mobile-nav a', function(event) {
+		$(window).off('.noScroll');
 		$('.mobile-nav').removeClass('active');
 		if(!this.hash) return;
 		event.preventDefault();
