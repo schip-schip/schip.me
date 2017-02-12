@@ -30,6 +30,17 @@ h6 {
 	position: relative;
 	margin: 10px 0;
 }
+@media (max-width:991px) {
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		padding: 0 15px;
+	}
+}
 h1 {
 	font-size: 60px;
 }
@@ -392,8 +403,10 @@ header .typed-cursor {
 }
 /***************************************** INTRO-TABLE ******************************************/
 /********************************************************************************************/
-.container.intro-tables{
-	height: 170px;
+@media(min-width:992px){
+	.container.intro-tables{
+		height: 170px;
+	}
 }
 .row.intro-tables {
 	top: -170px;
