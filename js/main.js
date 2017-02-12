@@ -210,8 +210,8 @@ jQuery(function($) {
 	});
 
 	$('body').on('click', '.mobile-nav a.close-link', function(event) {
+		$(window).off('.noScroll');
 		$('.mobile-nav').removeClass('active');
-		// $(window).off('.noScroll');
 		event.preventDefault();
 	});
 
