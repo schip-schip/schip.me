@@ -84,14 +84,13 @@ jQuery(function($) {
 	var owlPricing;
 	var ratio = 2;
 
-	// Window Load
+	//***************************************************** Window Load *****************************************************
 	$(window).load(function() {
 		// Preloader
-		$('.intro-tables, .parallax, header').css('opacity', '0');
 		$('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 			$('.preloader').hide();
 			$('.parallax, header').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-				$('.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+				$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 			});
 		});
 
@@ -125,9 +124,9 @@ jQuery(function($) {
 		});
 
 		// Navbar Init
-		$('nav').addClass('original').clone().insertAfter('nav').addClass('navbar-fixed-top').css('position', 'fixed').css('top', '0').css('margin-top', '0').removeClass('original');
+		$('nav').clone().insertAfter('nav').addClass('navbar-fixed-top').removeClass('original');
 		$('.mobile-nav ul').html($('nav .navbar-nav').html());
-		$('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
+		// $('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
 		// Typing Intro Init
 		$(".typed").typewriter({
@@ -154,6 +153,8 @@ jQuery(function($) {
 			filter: ':not(.btn)'
 		});
 	});
+	//***************************************************** END OF Window Load *****************************************************
+
 	// Window Scroll
 	function onScroll() {
 		if ($(window).scrollTop() > 50) {
@@ -185,6 +186,9 @@ jQuery(function($) {
 	// Mobile Nav
 	$('body').on('click', 'nav .navbar-toggle', function() {
 		event.stopPropagation();
+		$(window).on('touchmove.noScroll', function(e) {
+      e.preventDefault();
+	  });
 		$('.mobile-nav').addClass('active');
 	});
 
@@ -206,6 +210,7 @@ jQuery(function($) {
 	});
 
 	$('body').on('click', '.mobile-nav a.close-link', function(event) {
+		$(window).off('.noScroll');
 		$('.mobile-nav').removeClass('active');
 		event.preventDefault();
 	});
@@ -231,7 +236,7 @@ jQuery(function($) {
 			bottomMargin = parseInt($dialog.css('marginBottom'), 10);
 
 		// Make sure you don't hide the top part of the modal w/ a negative margin
-		// if it's longer than the screen height, and keep the margin equal to 
+		// if it's longer than the screen height, and keep the margin equal to
 		// the bottom margin of the modal
 		if (offset < bottomMargin) offset = bottomMargin;
 		$dialog.css("margin-top", offset);

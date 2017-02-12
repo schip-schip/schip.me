@@ -44,23 +44,23 @@
 	<div class="preloader">
 		<img src="img/loader.gif" alt="Preloader image">
 	</div>
-	<nav class="navbar">
+	<nav class="navbar original">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
+				<button type="button" class="navbar-toggle collapsed">
+					<span class="sr-only">目次</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
 				<a href="/" class="navbar-brand"><img src="img/logoboth.png" alt="Schipロゴ"></a>
 			</div>
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					{{ page.list1 }}
-					{{ page.list2 }}
-					{{ page.list3 }}
-					<li><a data-toggle="modal" data-target="#modal1" class="btn btn-blue">Contact</a></li>
+					<li>{{ page.list1 }}</li>
+					<li>{{ page.list2 }}</li>
+					<li>{{ page.list3 }}</li>
+					<li><a href="#footer-contact" class="btn btn-blue">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -68,6 +68,30 @@
 
 	{{ content }}
 
+	<footer id="footer-contact">
+		<div class="container">
+			<div class="text-center margin-bottom-16px">
+				<h3 class="white">お気軽にご連絡ください</h3>
+			</div>
+			<div class="row">
+				<div class="col-md-3 text-center margin-bottom-16px">
+					<a href="https://twitter.com/schip__" target=”_blank” class="btn btn-blue"><i class="fa fa-twitter"></i> Twitter</a>
+				</div>
+				<div class="col-md-3 text-center margin-bottom-16px">
+					<a data-toggle="modal" data-target="#modal1" class="btn btn-blue" id="btnCntctTpFoot"><i class="fa fa-envelope" aria-hidden="true"></i> メール</a>
+				</div>
+				<div class="col-md-3 text-center margin-bottom-16px">
+					<a href="https://line.me/R/ti/p/%40qcf7943x" target=”_blank” class="btn btn-blue"><img src="img/LINEat_logotype_CMKY_white_noBg.svg" class="btn-lineat"></a>
+				</div>
+				<div class="col-md-3 text-center margin-bottom-16px">
+					<a href="https://www.facebook.com/schipedu/" target=”_blank” class="btn btn-blue"><i class="fa fa-facebook"></i> Facebook</a>
+				</div>
+			</div>
+			<div class="row bottom-footer text-center">
+				<p>&copy; 2017 Schip All Rights Reserved.</p>
+			</div>
+		</div>
+	</footer>
 	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
@@ -93,32 +117,11 @@
 			</div>
 		</div>
 	</div>
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3 text-center">
-					<h3 class="white">お気軽にご連絡ください</h3>
-					<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue" id="btnCntctTpFoot">コンタクトフォームを開く</a>
-				</div>
-			</div>
-			<div class="row bottom-footer text-center-mobile">
-				<div class="col-sm-8">
-					<p>&copy; 2017 Schip All Rights Reserved.</p>
-				</div>
-				<div class="col-sm-4 text-right text-center-mobile">
-					<ul class="social-footer">
-						<li><a href="https://www.facebook.com/schipedu/" target=”_blank”><i class="fa fa-facebook"></i></a></li>
-						<li><a href="https://twitter.com/schip__" target=”_blank”><i class="fa fa-twitter"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
 	<!-- Holder for mobile navigation -->
 	<div class="mobile-nav">
 		<ul>
 		</ul>
-		<a href="#" class="close-link"><i class="arrow_up"></i></a>
+		<a class="close-link"><i class="arrow_up"></i></a>
 	</div>
 	<!-- Preload -->
 	<div id="preload_serviceText-hover_png"></div>
