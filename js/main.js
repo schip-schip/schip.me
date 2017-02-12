@@ -211,7 +211,7 @@ jQuery(function($) {
 
 	$('body').on('click', '.mobile-nav a.close-link', function(event) {
 		$('.mobile-nav').removeClass('active');
-		$(window).off('.noScroll');
+		// $(window).off('.noScroll');
 		event.preventDefault();
 	});
 
