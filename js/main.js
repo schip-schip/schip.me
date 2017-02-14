@@ -165,6 +165,16 @@ jQuery(function($) {
 		}
 	}
 
+$(function() {
+	$('.smscroll').click(function() {
+		var target = $(this).attr('href');
+		if (!target.length) return ;
+		$("html,body").animate({scrollTop:$(target).offset().top}, 600, 'swing');
+		return false;
+	});
+});
+
+
 	window.addEventListener('scroll', onScroll, false);
 
 	// Window Resize

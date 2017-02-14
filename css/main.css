@@ -205,6 +205,12 @@ ul.white-list li:before {
 	margin-right: 15px;
 	background: white;
 }*/
+@media(max-width:992px) {
+	ul{
+	  -webkit-padding-start: 20px;
+	}
+}
+
 
 /* Form Control */
 
@@ -935,8 +941,29 @@ section#team{
 	border-bottom: solid 2px #0CADF6;
 }
 header.service-page{
-	 height: 40vh !important;
+	height: 40vh !important;
 }
 header.service-page .table{
-    padding-top: 25px;
+  padding-top: 25px;
+}
+p.question{
+	margin-top: 24px;
+}
+p.question:before{
+	content: '\f059';
+	display: inline-block;
+	width: 24px;
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	text-indent: 0;
+	margin-right: 8px;
+}
+p.answer{
+	margin-left: 32px;
+}
+@media(max-width:992px) {
+	p.answer{
+		margin-left: 0;
+	}
+
 }
