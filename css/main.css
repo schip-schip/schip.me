@@ -18,17 +18,14 @@ p,h1,h2,h3,h4{
 .heading1 {
 	font-size: 48px;
 	position: relative;
-	margin: 10px 0;
 }
 .heading2 {
 	font-size: 30px;
 	position: relative;
-	margin: 10px 0;
 }
 .heading3 {
 	font-size: 24px;
 	position: relative;
-	margin: 10px 0;
 }
 @media(max-width:992px) {
 	body{
