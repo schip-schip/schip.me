@@ -1,0 +1,16 @@
+
+{% include branch_header.html content="Anchor{{ include.year }}ダウンロード" %}
+
+<section>
+	<div class="cut cut-top"></div>
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-md-12 margin-bottom-16px">
+        <p>過去にこの教材を購入した方は、以下のボタンより最新のバージョンをダウンロードすることができます。</p>
+				<a class="btn btn-blue btn-margin-right" href="/texts/{{ include.file }}" download="{{ include.file }}" id="{{ include.btnid }}">Anchor {{ include.year }} をダウンロードする</a>
+        <p class="gray">こちらは、過去にこの教材を購入した方限定のダウンロードページです。<br>このページは検索エンジンにも表示されておらず、公開されているサイトからもリンクが貼られていないため、ご購入者限定の案内以外の方法でこのページにアクセスし教材をダウンロードすることは規約違反となります。<br>もしまだご購入されていない場合には、以下のボタンより、Anchorの購入ページにお進みください。</p>
+        <a class="btn btn-blue btn-margin-right" href="/anchor.html">Anchor購入ページ</a>
+			</div>
+		</div>
+	</div>
+</section>
