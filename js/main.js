@@ -109,29 +109,29 @@ jQuery(function($) {
 				$(this).css('border-left-width', $(this).parent().width() + "px");
 		});
 
-		// Sliders Init
-		$('.owl-schedule').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
-		$('.owl-testimonials').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
-		$('.owl-twitter').owlCarousel({
-			singleItem: true,
-			pagination: true
-		});
+		// // Sliders Init
+		// $('.owl-schedule').owlCarousel({
+		// 	singleItem: true,
+		// 	pagination: true
+		// });
+		// $('.owl-testimonials').owlCarousel({
+		// 	singleItem: true,
+		// 	pagination: true
+		// });
+		// $('.owl-twitter').owlCarousel({
+		// 	singleItem: true,
+		// 	pagination: true
+		// });
 
 		// Navbar Init
 		$('nav').clone().insertAfter('nav').addClass('navbar-fixed-top').removeClass('original');
 		$('.mobile-nav ul').html($('nav .navbar-nav').html());
 		// $('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
-		// Typing Intro Init
-		$(".typed").typewriter({
-			speed: 60
-		});
+		// // Typing Intro Init
+		// $(".typed").typewriter({
+		// 	speed: 60
+		// });
 
 		// Popup Form Init
 		var i = 0;

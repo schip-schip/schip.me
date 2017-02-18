@@ -276,11 +276,15 @@ ul.white-list li:before {
 	max-height: 80vh;
 }
 .modal-popup a.close-link {
-	font-size: 22px;
 	position: absolute;
 	top: 20px;
 	right: 30px;
 	color: #fff;
+	width: 44px;
+	height: 44px;
+}
+.modal-popup a.close-link > i {
+	font-size: 32px;
 }
 .popup-form {
 	width: 90%;
