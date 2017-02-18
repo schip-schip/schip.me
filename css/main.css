@@ -159,8 +159,14 @@ section {
 .margin-top-64{
 	margin-top: 64px;
 }
+.margin-top-16px{
+	margin-top: 16px;
+}
 .margin-bottom-16px{
 	margin-bottom: 16px;
+}
+.margin-bottom-32px{
+	margin-bottom: 32px;
 }
 .padding-top-100{
   padding-top: 100px;
