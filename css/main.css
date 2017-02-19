@@ -419,8 +419,12 @@ ul.white-list li:before {
 	width: 80%;
 	height: auto;
 }
+.img-40{
+	width: 40%;
+	height: auto;
+}
 @media(max-width:992px) {
-	.img-80{
+	.img-80, .img-40{
 		width: 100%;
 	}
 }
