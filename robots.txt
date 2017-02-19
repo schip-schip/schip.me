@@ -1,4 +1,3 @@
 User-Agent: *
 Disallow: /devdevdev.html
 Disallow: /downloads/
-Disallow: /news/
