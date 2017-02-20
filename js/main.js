@@ -52,7 +52,7 @@
 $(document).on('click','#btnFmCnfm',function(){
 	$("#fmInpt").addClass("hidden");
 	$("#fmCnfm").removeClass("hidden");
-	$("#fmInpt>.form-control").each( function() {
+	$("#fmInpt>.form-control:not(.btn)").each( function() {
 		var title = $(this).attr("name");
 		var val = $(this).val();
 		val = val.replace(/\n/g, "<br />");
@@ -69,7 +69,7 @@ $(document).on('click','#btnFmSbmt',function(){
 	$("#fmTnks").removeClass("hidden");
 	$("#dvFmCnfm").empty();
 	setTimeout(function(){
-    	$('#modal1').modal('hide');
+  	$('#modal-contact').modal('hide');
 		$('#fmInpt>input,textarea').val('');
 		$("#fmTnks").addClass("hidden");
 		$("#fmInpt").removeClass("hidden");
@@ -256,7 +256,7 @@ $(function() {
 
 	$('.modal-popup .close-link').click(function(event){
 		event.preventDefault();
-		$('#modal1').modal('hide');
+		$('.modal').modal('hide');
 	});
 
 	$(window).on("resize", function() {

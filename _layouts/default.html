@@ -88,7 +88,7 @@
 					<a href="https://twitter.com/schip__" target="_blank" class="btn btn-blue"><i class="fa fa-twitter"></i> Twitter</a>
 				</div>
 				<div class="col-md-3 text-center margin-bottom-16px">
-					<a data-toggle="modal" data-target="#modal1" class="btn btn-blue" id="btnCntctTpFoot"><i class="fa fa-envelope" aria-hidden="true"></i> メール</a>
+					<a data-toggle="modal" data-target="#modal-contact" class="btn btn-blue" id="btnCntctTpFoot"><i class="fa fa-envelope" aria-hidden="true"></i> メール</a>
 				</div>
 				<div class="col-md-3 text-center margin-bottom-16px">
 					<a href="https://line.me/R/ti/p/%40qcf7943x" target="_blank" class="btn btn-blue"><img src="/img/LINEat_logotype_CMKY_white_noBg.svg" class="btn-lineat"></a>
@@ -102,26 +102,27 @@
 			</div>
 		</div>
 	</footer>
-	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
-				<a href="#" class="close-link"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
 				<p class="heading3 white">ご連絡フォーム</p>
-				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" id="fmCntct" novalidate>
+				<a href="#" class="close-link"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+				<p class="white">全ての項目を入力してください。</p>
+				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" novalidate>
 					<div id="fmInpt">
-						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前">
-						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス">
-						<textarea name="お問い合わせ内容" class="form-control form-white" rows="6" placeholder="お問い合わせ内容"></textarea>
-						<span class="btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
+						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]">
+						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]">
+						<textarea name="お問い合わせ内容" class="form-control form-white" rows="8" placeholder="お問い合わせ内容 [必須]"></textarea>
+						<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
 					</div>
 					<div class="hidden" id="fmCnfm">
 						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
 						<div id="dvFmCnfm"></div>
-						<button type="submit" class="btn btn-submit" id="btnFmSbmt">送信</button>
+						<button type="submit" class="form-control btn btn-submit" id="btnFmSbmt">送信</button>
 						<span class="btn btn-blue" id="btnFmCrrct">訂正する</span>
 					</div>
 					<div class="hidden" id="fmTnks">
-						<p class="white">正常に送信されました。ありがとうございました。なお、ご連絡には返信できかねる場合がございます。予めご了承ください。</p>
+						<p class="white">正常に送信されました。ありがとうございました。なお、内容によっては返信できかねる場合がございますのでご了承ください。</p>
 					</div>
 				</form>
 			</div>
