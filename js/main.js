@@ -50,29 +50,24 @@
 // ********************* END OF MOBILE TAP *********************
 // ********************* CONTACT FROM *********************
 $(document).on('click','#btnFmCnfm',function(){
-	$("#fmInpt").addClass("hidden");
-	$("#fmCnfm").removeClass("hidden");
-	$("#fmInpt>.form-control:not(.btn)").each( function() {
-		var title = $(this).attr("name");
-		var val = $(this).val();
-		val = val.replace(/\n/g, "<br />");
-		$('#dvFmCnfm').append('<p class="white">'+title+'</p><span class="form-control form-white">'+val+'</span>');
-	});
+	$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
+	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
 });
 $(document).on('click','#btnFmCrrct',function(){
-	$("#fmCnfm").addClass("hidden");
-	$("#fmInpt").removeClass("hidden");
-	$("#dvFmCnfm").empty();
+	$("#form-contact-explain").html("全ての項目を入力してください。");
+	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
+	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
 });
 $(document).on('click','#btnFmSbmt',function(){
-	$("#fmCnfm").addClass("hidden");
-	$("#fmTnks").removeClass("hidden");
-	$("#dvFmCnfm").empty();
+	$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
+	$("#form-contact").addClass("hidden");
 	setTimeout(function(){
   	$('#modal-contact').modal('hide');
-		$('#fmInpt>input,textarea').val('');
-		$("#fmTnks").addClass("hidden");
-		$("#fmInpt").removeClass("hidden");
+		$("#form-contact-explain").html("全ての項目を入力してください。");
+		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+		$("#form-contact").removeClass("hidden");
 	},4000);
 });
 // ********************* END OF CONTACT FROM *********************

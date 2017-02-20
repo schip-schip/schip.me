@@ -107,19 +107,17 @@
 			<div class="modal-content modal-popup">
 				<p class="heading3 white">ご連絡フォーム</p>
 				<a href="#" class="close-link"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
-				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" novalidate>
-					<div id="fmInpt">
-						<p class="white">全ての項目を入力してください。</p>
-						<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]">
-						<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]">
-						<textarea name="お問い合わせ内容" class="form-control form-white" rows="8" placeholder="お問い合わせ内容 [必須]"></textarea>
-						<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
-					</div>
-					<div class="hidden" id="fmCnfm">
-						<p class="white">以下の内容で送信しますが、よろしいですか？</p>
-						<div id="dvFmCnfm"></div>
-						<button type="submit" class="form-control btn btn-submit" id="btnFmSbmt">送信</button>
-						<span class="btn btn-blue" id="btnFmCrrct">訂正する</span>
+				<p class="white" id="form-contact-explain">全ての項目を入力してください。</p>
+				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" id="form-contact">
+					<p class="white form-contact-label hidden">お名前</p>
+					<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]" required="required">
+					<p class="white form-contact-label hidden">メールアドレス</p>
+					<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]" required="required">
+					<p class="white form-contact-label hidden">お問い合わせ内容</p>
+					<textarea name="お問い合わせ内容" class="form-control form-white" rows="8" placeholder="お問い合わせ内容 [必須]" required="required"></textarea>
+					<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
+					<input type="submit" value="送信" class="form-control btn btn-submit hidden" id="btnFmSbmt">
+					<span class="btn btn-blue hidden" id="btnFmCrrct">訂正する</span>
 					</div>
 					<div class="hidden" id="fmTnks">
 						<p class="white">正常に送信されました。ありがとうございました。なお、内容によっては返信できかねる場合がございますのでご了承ください。</p>
