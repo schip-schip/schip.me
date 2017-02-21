@@ -269,12 +269,13 @@ ul.white-list li:before {
 
 /* Popup */
 .modal-dialog{
-  margin: 20vw;
+  margin: 10vh 20vw;
+	width: 100%;
 }
 .modal-popup {
 	position: relative;
   width: 60vw;
-	max-height: 80vh;
+	height: 80vh;
 	padding: 45px 30px;
 	text-align: center;
 	background-color: #0CADF6;
@@ -331,9 +332,9 @@ ul.white-list li:before {
 	color: #fff;
 	background: #0CADF6;
 }*/
-@media(max-width: 768px) {
+@media(max-width:991px) {
 	.modal-dialog{
-	  margin: 5vw;
+	  margin: 10vh 5vw;
 	}
 	.modal-popup {
 	  width: 90vw;
@@ -350,6 +351,11 @@ ul.white-list li:before {
 	}
 	.popup-form {
 		width: 100%;
+	}
+}
+@media(max-width: 767px) {
+	.modal-popup textarea{
+		max-height: 30vh;
 	}
 }
 
