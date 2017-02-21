@@ -49,15 +49,20 @@
 )();
 // ********************* END OF MOBILE TAP *********************
 // ********************* CONTACT FROM *********************
+
 $(document).on('click','#btnFmCnfm',function(){
+	$("#form-contact").validationEngine('validate')
 	$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
 	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+	// $('form').validationEngine('hide');
 	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+	$("#form-contact").validationEngine("updatePromptsPosition");
 });
 $(document).on('click','#btnFmCrrct',function(){
 	$("#form-contact-explain").html("全ての項目を入力してください。");
 	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
 	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+	$("#form-contact").validationEngine("updatePromptsPosition");
 });
 $(document).on('click','#btnFmSbmt',function(){
 	$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
@@ -146,6 +151,13 @@ jQuery(function($) {
 			changeHash: false,
 			scrollSpeed: 400
 		});
+
+	  $("form").validationEngine('attach', {
+			promptPosition : "topLeft",
+			scroll: false,
+			ajaxFormValidation: true
+		});
+
 	});
 	//***************************************************** END OF Window Load *****************************************************
 

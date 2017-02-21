@@ -22,6 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/validationEngine.jquery.min.css">
 	<!-- Fonts -->
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<!-- Main style -->
@@ -110,11 +111,11 @@
 				<p class="white" id="form-contact-explain">全ての項目を入力してください。</p>
 				<form class="popup-form formrun" action="https://form.run/api/v1/r/s25k2SjYaWOkxY4QokjL" method="post" id="form-contact">
 					<p class="white form-contact-label hidden">お名前</p>
-					<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]" required="required">
+					<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]" required="required" data-validation-engine="validate[required]">
 					<p class="white form-contact-label hidden">メールアドレス</p>
-					<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]" required="required">
+					<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]" required="required" data-validation-engine="validate[required,custom[email]]">
 					<p class="white form-contact-label hidden">お問い合わせ内容</p>
-					<textarea name="お問い合わせ内容" class="form-control form-white" rows="18" placeholder="お問い合わせ内容 [必須]" required="required"></textarea>
+					<textarea name="お問い合わせ内容" class="form-control form-white" rows="18" placeholder="お問い合わせ内容 [必須]" required="required" data-validation-engine="validate[required]"></textarea>
 					<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
 					<input type="submit" value="送信" class="form-control btn btn-submit hidden" id="btnFmSbmt">
 					<span class="btn btn-blue hidden" id="btnFmCrrct">訂正する</span>
@@ -140,6 +141,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/jquery.validationEngine.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Validation-Engine/2.6.4/languages/jquery.validationEngine-ja.min.js"></script>
 	<script src="https://sdk.form.run/js/v1/sdk.js"></script>
 	<script src="/js/main.js"></script>
 </body>

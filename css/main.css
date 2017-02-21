@@ -227,6 +227,9 @@ ul.white-list li:before {
 	border-radius: 0;
 	box-shadow: none;
 }
+.form-control:not([type="submit"]):valid{
+	background-color: rgba(0,168,178,0.5) !important;
+}
 .form-control.form-white {
 	color: #fff;
 	border: 2px solid white;
@@ -255,6 +258,18 @@ ul.white-list li:before {
 .form-control.btn-submit:hover, .form-control.btn-submit.hover {
 	background: rgba(255,255,255,0.8);
 }
+
+.formError{
+  margin-top: 0 !important;
+}
+.formError .formErrorContent {
+  font-size: 14px;
+	border: none;
+}
+.formError .formErrorArrow {
+  display: none;
+}
+
 
 @media(max-width: 992px) {
 	.form-control{
