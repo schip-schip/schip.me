@@ -48,34 +48,6 @@
 	}
 )();
 // ********************* END OF MOBILE TAP *********************
-// ********************* CONTACT FROM *********************
-
-$(document).on('click','#btnFmCnfm',function(){
-	$("#form-contact").validationEngine('validate')
-	$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
-	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
-	// $('form').validationEngine('hide');
-	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-	$("#form-contact").validationEngine("updatePromptsPosition");
-});
-$(document).on('click','#btnFmCrrct',function(){
-	$("#form-contact-explain").html("全ての項目を入力してください。");
-	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
-	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-	$("#form-contact").validationEngine("updatePromptsPosition");
-});
-$(document).on('click','#btnFmSbmt',function(){
-	$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
-	$("#form-contact").addClass("hidden");
-	setTimeout(function(){
-  	$('#modal-contact').modal('hide');
-		$("#form-contact-explain").html("全ての項目を入力してください。");
-		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
-		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-		$("#form-contact").removeClass("hidden");
-	},4000);
-});
-// ********************* END OF CONTACT FROM *********************
 jQuery(function($) {
 	"use strict";
 	// Author Code Here
@@ -198,6 +170,7 @@ jQuery(function($) {
 	// });
 
 	// Mobile Nav
+	// Mobile Nav OPEN & LOCK SCROLL
 	$('body').on('click', 'nav .navbar-toggle', function() {
 		event.stopPropagation();
 		$(window).on('touchmove.noScroll', function(e) {
@@ -206,6 +179,7 @@ jQuery(function($) {
 		$('.mobile-nav').addClass('active');
 	});
 
+	// Mobile Nav TRNSITION & UN-LOCK SCROLL
 	$('body').on('click', '.mobile-nav a', function(event) {
 		$(window).off('.noScroll');
 		$('.mobile-nav').removeClass('active');
@@ -250,4 +224,54 @@ jQuery(function($) {
 	});
 
 });
-// ********************* END OF TEMPLATE ORIGINAL *********************
+// ********************* CONTACT FROM *********************
+
+var scrollpos;
+
+function lockScroll(){
+	console.log("lock scroll");
+	scrollpos = $(window).scrollTop();
+	$('body').addClass('fixed-scroll').css({'top': -scrollpos});
+}
+function unlockScroll(){
+	console.log("unlock scroll");
+	$('body').removeClass('fixed-scroll').css({'top': 0});
+	window.scrollTo( 0 , scrollpos );
+}
+
+$('body').on('click', '#btn-contact', function() {
+	lockScroll();
+});
+
+$('body').on('click', '.modal-popup a.close-link', function() {
+	unlockScroll();
+});
+
+
+$(document).on('click','#btnFmCnfm',function(){
+	$("#form-contact").validationEngine('validate')
+	$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
+	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+	// $('form').validationEngine('hide');
+	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+	$("#form-contact").validationEngine("updatePromptsPosition");
+});
+$(document).on('click','#btnFmCrrct',function(){
+	$("#form-contact-explain").html("全ての項目を入力してください。");
+	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
+	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+	$("#form-contact").validationEngine("updatePromptsPosition");
+});
+$(document).on('click','#btnFmSbmt',function(){
+	$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
+	$("#form-contact").addClass("hidden");
+	unlockScroll();
+	setTimeout(function(){
+  	$('#modal-contact').modal('hide');
+		$("#form-contact-explain").html("全ての項目を入力してください。");
+		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+		$("#form-contact").removeClass("hidden");
+	},4000);
+});
+// ********************* END OF CONTACT FROM *********************

@@ -313,6 +313,11 @@ ul.white-list li:before {
   width: 36vw;
 	margin: 24px auto;
 }
+.fixed-scroll {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 /*.popup-form .form-control.dropdown {
 	text-align: left;
 }
