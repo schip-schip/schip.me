@@ -76,7 +76,6 @@ $(document).on('click','#btnFmSbmt',function(){
 	},4000);
 });
 // ********************* END OF CONTACT FROM *********************
-// ********************* TEMPLATE ORIGINAL *********************
 jQuery(function($) {
 	"use strict";
 	// Author Code Here
@@ -95,11 +94,11 @@ jQuery(function($) {
 		});
 
 		// Header Init
-		if ($(window).height() > $(window).width()) {
-			var ratio = $('.parallax').width() / $('.parallax').height();
-			$('.parallax img').css('height', ($(window).height()) + 'px');
-			$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
-		}
+		// if ($(window).height() > $(window).width()) {
+		// 	var ratio = $('.parallax').width() / $('.parallax').height();
+		// 	$('.parallax img').css('height', ($(window).height()) + 'px');
+		// 	$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
+		// }
 
 		$('header').height($(window).height() + 80);
 		$('section .cut').each(function() {
@@ -172,15 +171,14 @@ jQuery(function($) {
 		}
 	}
 
-$(function() {
-	$('.smscroll').click(function() {
-		var target = $(this).attr('href');
-		if (!target.length) return ;
-		$("html,body").animate({scrollTop:$(target).offset().top}, 600, 'swing');
-		return false;
+	$(function() {
+		$('.smscroll').click(function() {
+			var target = $(this).attr('href');
+			if (!target.length) return ;
+			$("html,body").animate({scrollTop:$(target).offset().top}, 600, 'swing');
+			return false;
+		});
 	});
-});
-
 
 	window.addEventListener('scroll', onScroll, false);
 
@@ -190,14 +188,14 @@ $(function() {
 	});
 
 	// Pricing Box Click Event
-	$('.pricing .box-main').click(function() {
-		$('.pricing .box-main').removeClass('active');
-		$('.pricing .box-second').removeClass('active');
-		$(this).addClass('active');
-		$(this).next($('.box-second')).addClass('active');
-		$('#pricing').css("background-image", "url(" + $(this).data('img') + ")");
-		$('#pricing').css("background-size", "cover");
-	});
+	// $('.pricing .box-main').click(function() {
+	// 	$('.pricing .box-main').removeClass('active');
+	// 	$('.pricing .box-second').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	$(this).next($('.box-second')).addClass('active');
+	// 	$('#pricing').css("background-image", "url(" + $(this).data('img') + ")");
+	// 	$('#pricing').css("background-size", "cover");
+	// });
 
 	// Mobile Nav
 	$('body').on('click', 'nav .navbar-toggle', function() {

@@ -458,12 +458,6 @@ ul.white-list li:before {
 	top: calc(50% - 32px);
 	left: calc(50% - 32px);
 }
-.preloader div {
-	display: none;
-	/* Preload the Second Pricing Image */
-	background: url(../img/pricing2.jpg) no-repeat 9999px 9999px;
-	background-position: 9999px 9999px;
-}
 /***************************************** Navigation Bar ******************************************/
 /***************************************************************************************************/
 .navbar {
@@ -956,18 +950,6 @@ section#news .cut.cut-bottom{
 }
 #btnFmCrrct{
 	margin-top: 30px;
-}
-#preload_serviceText-hover_png{
-	width: 0px;
-	height: 0px;
-	display: inline;
-	/*background-image: url('../img/serviceText-hover.png');*/
-}
-#preload_serviceClass-hover_png{
-	width: 0px;
-	height: 0px;
-	display: inline;
-	/*background-image: url('../img/serviceClass-hover.png');*/
 }
 
 /*******************************************************************************************************************************************/
