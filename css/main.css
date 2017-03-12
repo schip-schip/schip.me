@@ -998,3 +998,73 @@ p.answer{
 		margin-left: 0;
 	}
 }
+/*******************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+/*****************************************                  butsugi               ******************************************/
+/*******************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+/*******************************************************************************************************************************************/
+
+div.discussion {
+	display: flex;
+	align-items: center;
+}
+div.discussion div:first-child {
+	margin: 16px 16px 16px 0px;
+  min-width: 8vw;
+	height: 8vw;
+	border-radius: 4vw;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+div.discussion div:last-child {
+	position: relative;
+	margin: 16px 0px;
+	flex-grow: 1;
+	background: #7dc9fa;
+	border-radius: 16px;
+	padding: 16px 4px 16px 16px;
+	min-height: 80px;
+	display: flex;
+  align-items: center;
+}
+div.discussion div:last-child:before {
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	border-right-color: #7dc9fa;
+	border-width: 12px;
+	content: " ";
+	pointer-events: none;
+}
+div.kodama div:first-child {
+	background-image: url("/img/team/kodama.jpg");
+}
+div.kodama div:last-child span:before {
+	content: '（こだま）';
+}
+div.kameoka div:first-child {
+	background-image: url("/img/team/kameoka.jpg");
+}
+div.kameoka div:last-child span:before {
+	content: '（かめ）';
+}
+div.taniguchi div:first-child {
+	background-image: url("/img/team/taniguchi.jpg");
+}
+div.taniguchi div:last-child span:before {
+	content: '（ユージン）';
+}
+@media(max-width:991px) {
+	div.discussion div:first-child {
+		padding: 8px 8px 8px 0px;
+		min-width: 12vw;
+		height: 12vw;
+		border-radius: 6vw;
+	}
+	div.discussion div:last-child {
+		margin: 8px 0px;
+	}
+}
