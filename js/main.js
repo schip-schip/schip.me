@@ -1,63 +1,55 @@
-// ********************* MOBILE TAP *********************
-(
-	function () {
-		var tapClass = "";
-		var hoverClass = "";
-		var Hover = window.Hover = function (ele) {
-			return new Hover.fn.init(ele);
-		};
-		Hover.fn = {
-			//Hover Instance
-			init : function (ele) {
-				this.prop = ele;
-			},
-			bind : function (_hoverClass, _tapClass) {
-				hoverClass = _hoverClass;
-				tapClass = _tapClass;
-				$(window).bind("touchstart", function(event) {
-					var target = event.target || window.target;
-					var bindElement = null;
-					if (target.tagName == "A" || $(target).hasClass(tapClass)) {
-					bindElement = $(target);
-					} else if ($(target).parents("a").length > 0) {
-					bindElement = $(target).parents("a");
-					} else if ($(target).parents("." + tapClass).length > 0) {
-					bindElement = $(target).parents("." + tapClass);
-					}
-					if (bindElement != null) {
-					Hover().touchstartHoverElement(bindElement);
-					}
-				});
-			},
-			touchstartHoverElement : function (bindElement) {
-				bindElement.addClass(hoverClass);
-				bindElement.unbind("touchmove", Hover().touchmoveHoverElement);
-				bindElement.bind("touchmove", Hover().touchmoveHoverElement);
-				bindElement.unbind("touchend", Hover().touchendHoverElement);
-				bindElement.bind("touchend", Hover().touchendHoverElement);
-			},
-			touchmoveHoverElement : function (event) {
-				$(this).removeClass(hoverClass);
-			},
-			touchendHoverElement : function (event) {
-				$(this).removeClass(hoverClass);
-			}
+$( document ).ready( function() {
+	// ********************* MOBILE TAP *********************************************************************************************************************
+	var tapClass = "";
+	var hoverClass = "";
+	var Hover = window.Hover = function (ele) {
+		return new Hover.fn.init(ele);
+	};
+	Hover.fn = {
+		//Hover Instance
+		init : function (ele) {
+			this.prop = ele;
+		},
+		bind : function (_hoverClass, _tapClass) {
+			hoverClass = _hoverClass;
+			tapClass = _tapClass;
+			$(window).bind("touchstart", function(event) {
+				var target = event.target || window.target;
+				var bindElement = null;
+				if (target.tagName == "A" || $(target).hasClass(tapClass)) {
+				bindElement = $(target);
+				} else if ($(target).parents("a").length > 0) {
+				bindElement = $(target).parents("a");
+				} else if ($(target).parents("." + tapClass).length > 0) {
+				bindElement = $(target).parents("." + tapClass);
+				}
+				if (bindElement != null) {
+				Hover().touchstartHoverElement(bindElement);
+				}
+			});
+		},
+		touchstartHoverElement : function (bindElement) {
+			bindElement.addClass(hoverClass);
+			bindElement.unbind("touchmove", Hover().touchmoveHoverElement);
+			bindElement.bind("touchmove", Hover().touchmoveHoverElement);
+			bindElement.unbind("touchend", Hover().touchendHoverElement);
+			bindElement.bind("touchend", Hover().touchendHoverElement);
+		},
+		touchmoveHoverElement : function (event) {
+			$(this).removeClass(hoverClass);
+		},
+		touchendHoverElement : function (event) {
+			$(this).removeClass(hoverClass);
 		}
-		Hover.fn.init.prototype = Hover.fn;
-		Hover().bind("hover", "tap");
 	}
-)();
-// ********************* END OF MOBILE TAP *********************
-jQuery(function($) {
-	"use strict";
-	// Author Code Here
+	Hover.fn.init.prototype = Hover.fn;
+	Hover().bind("hover", "tap");
+	// ********************* END OF MOBILE TAP ***************************************************************************************************
 
-	var owlPricing;
-	var ratio = 2;
-
-	//***************************************************** Window Load *****************************************************
+	// ********************* Window Load *********************************************************************************************************
 	$(window).load(function() {
-		// Preloader
+
+		// ********************* preloader
 		$('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 			$('.preloader').hide();
 			$('.parallax, header').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
@@ -65,14 +57,10 @@ jQuery(function($) {
 			});
 		});
 
-		// Header Init
-		// if ($(window).height() > $(window).width()) {
-		// 	var ratio = $('.parallax').width() / $('.parallax').height();
-		// 	$('.parallax img').css('height', ($(window).height()) + 'px');
-		// 	$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
-		// }
-
+		// ********************* Header height
 		$('header').height($(window).height() + 80);
+
+		// ********************* cut section
 		$('section .cut').each(function() {
 			if ($(this).hasClass('cut-top'))
 				$(this).css('border-right-width', $(this).parent().width() + "px");
@@ -80,59 +68,47 @@ jQuery(function($) {
 				$(this).css('border-left-width', $(this).parent().width() + "px");
 		});
 
-		// // Sliders Init
-		// $('.owl-schedule').owlCarousel({
-		// 	singleItem: true,
-		// 	pagination: true
-		// });
-		// $('.owl-testimonials').owlCarousel({
-		// 	singleItem: true,
-		// 	pagination: true
-		// });
-		// $('.owl-twitter').owlCarousel({
-		// 	singleItem: true,
-		// 	pagination: true
-		// });
-
-		// Navbar Init
+		// ********************* Navbar Init
 		$('nav').clone().insertAfter('nav').addClass('navbar-fixed-top').removeClass('original');
 		$('.mobile-nav ul').html($('nav .navbar-nav').html());
-		// $('nav.navbar-fixed-top .navbar-brand img').attr('src', $('nav.navbar-fixed-top .navbar-brand img').data("active-url"));
 
-		// // Typing Intro Init
-		// $(".typed").typewriter({
-		// 	speed: 60
-		// });
-
-		// Popup Form Init
-		var i = 0;
-		var interval = 0.15;
-		$('.popup-form .dropdown-menu li').each(function() {
-			$(this).css('animation-delay', i + "s");
-			i += interval;
-		});
-		$('.popup-form .dropdown-menu li a').click(function(event) {
-			event.preventDefault();
-			$(this).parent().parent().prev('button').html($(this).html());
-		});
-
-		// Onepage Nav
+		// ********************* Onepage Nav
 		$('.navbar.navbar-fixed-top .navbar-nav').onePageNav({
 			currentClass: 'active',
 			changeHash: false,
 			scrollSpeed: 400
 		});
 
+		// ********************* jQuery-Validation-Engine
 	  $("form").validationEngine('attach', {
 			promptPosition : "topLeft",
 			scroll: false,
 			ajaxFormValidation: true
 		});
 
-	});
-	//***************************************************** END OF Window Load *****************************************************
+		// ********************* Header parallax
+		// var ratio = 2;
+		// if ($(window).height() > $(window).width()) {
+		// 	var ratio = $('.parallax').width() / $('.parallax').height();
+		// 	$('.parallax img').css('height', ($(window).height()) + 'px');
+		// 	$('.parallax img').css('width', $('.parallax').height() * ratio + 'px');
+		// }
 
-	// Window Scroll
+		// // ********************* Popup Form Init
+		// var i = 0;
+		// var interval = 0.15;
+		// $('.popup-form .dropdown-menu li').each(function() {
+		// 	$(this).css('animation-delay', i + "s");
+		// 	i += interval;
+		// });
+		// $('.popup-form .dropdown-menu li a').click(function(event) {
+		// 	event.preventDefault();
+		// 	$(this).parent().parent().prev('button').html($(this).html());
+		// });
+	});
+	// ********************* END OF Window Load ****************************************************************************************************************
+
+	// ********************* Window Scroll ********************************************************************************************************************
 	function onScroll() {
 		if ($(window).scrollTop() > 50) {
 			$('nav.original').css('opacity', '0');
@@ -154,22 +130,27 @@ jQuery(function($) {
 
 	window.addEventListener('scroll', onScroll, false);
 
-	// Window Resize
+	// ********************* Window Resize ********************************************************************************************************************
 	$(window).resize(function() {
 		$('header').height($(window).height());
 	});
 
-	// Pricing Box Click Event
-	// $('.pricing .box-main').click(function() {
-	// 	$('.pricing .box-main').removeClass('active');
-	// 	$('.pricing .box-second').removeClass('active');
-	// 	$(this).addClass('active');
-	// 	$(this).next($('.box-second')).addClass('active');
-	// 	$('#pricing').css("background-image", "url(" + $(this).data('img') + ")");
-	// 	$('#pricing').css("background-size", "cover");
-	// });
+	// ********************* Nav Click ********************************************************************************************************************
+	$('body').on('click', 'nav.original .navbar-nav a:not([data-toggle])', function() {
+		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+			event.stopPropagation();
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			}
+		}
+	});
 
-	// Mobile Nav
+	// ********************* Mobile Nav Open ********************************************************************************************************************
 	// Mobile Nav OPEN & LOCK SCROLL
 	$('body').on('click', 'nav .navbar-toggle', function() {
 		event.stopPropagation();
@@ -198,80 +179,65 @@ jQuery(function($) {
 		}
 	});
 
+	// Mobile Nav CLOSE & UN-LOCK SCROLL
 	$('body').on('click', '.mobile-nav a.close-link', function(event) {
 		$(window).off('.noScroll');
 		$('.mobile-nav').removeClass('active');
 		event.preventDefault();
 	});
 
-	$('body').on('click', 'nav.original .navbar-nav a:not([data-toggle])', function() {
-		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-			event.stopPropagation();
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-			if (target.length) {
-				$('html,body').animate({
-					scrollTop: target.offset().top
-				}, 1000);
-				return false;
-			}
-		}
-	});
-
+	// ********************* Modal Open ********************************************************************************************************************
 	$('.modal-popup .close-link').click(function(event){
 		event.preventDefault();
 		$('.modal').modal('hide');
 	});
 
-});
-// ********************* CONTACT FROM *********************
+	// ********************* Modal Contact ********************************************************************************************************************
+	var scrollpos;
 
-var scrollpos;
+	function lockScroll(){
+		scrollpos = $(window).scrollTop();
+		$('body').addClass('fixed-scroll').css({'top': -scrollpos});
+	}
+	function unlockScroll(){
+		$('body').removeClass('fixed-scroll').css({'top': 0});
+		window.scrollTo( 0 , scrollpos );
+	}
 
-function lockScroll(){
-	console.log("lock scroll");
-	scrollpos = $(window).scrollTop();
-	$('body').addClass('fixed-scroll').css({'top': -scrollpos});
-}
-function unlockScroll(){
-	console.log("unlock scroll");
-	$('body').removeClass('fixed-scroll').css({'top': 0});
-	window.scrollTo( 0 , scrollpos );
-}
+	$('body').on('click', '#btn-contact', function() {
+		lockScroll();
+	});
 
-$('body').on('click', '#btn-contact', function() {
-	lockScroll();
-});
-
-$('body').on('click', '.modal-popup a.close-link', function() {
-	unlockScroll();
-});
+	$('body').on('click', '.modal-popup a.close-link', function() {
+		unlockScroll();
+	});
 
 
-$(document).on('click','#btnFmCnfm',function(){
-	$("#form-contact").validationEngine('validate')
-	$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
-	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
-	// $('form').validationEngine('hide');
-	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-	$("#form-contact").validationEngine("updatePromptsPosition");
-});
-$(document).on('click','#btnFmCrrct',function(){
-	$("#form-contact-explain").html("全ての項目を入力してください。");
-	$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
-	$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-	$("#form-contact").validationEngine("updatePromptsPosition");
-});
-$(document).on('click','#btnFmSbmt',function(){
-	$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
-	$("#form-contact").addClass("hidden");
-	unlockScroll();
-	setTimeout(function(){
-  	$('#modal-contact').modal('hide');
-		$("#form-contact-explain").html("全ての項目を入力してください。");
-		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+	$(document).on('click','#btnFmCnfm',function(){
+		$("#form-contact").validationEngine('validate')
+		$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
+		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+		// $('form').validationEngine('hide');
 		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-		$("#form-contact").removeClass("hidden");
-	},4000);
+		$("#form-contact").validationEngine("updatePromptsPosition");
+	});
+	$(document).on('click','#btnFmCrrct',function(){
+		$("#form-contact-explain").html("全ての項目を入力してください。");
+		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
+		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+		$("#form-contact").validationEngine("updatePromptsPosition");
+	});
+	$(document).on('click','#btnFmSbmt',function(){
+		$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
+		$("#form-contact").addClass("hidden");
+		unlockScroll();
+		setTimeout(function(){
+	  	$('#modal-contact').modal('hide');
+			$("#form-contact-explain").html("全ての項目を入力してください。");
+			$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+			$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+			$("#form-contact").removeClass("hidden");
+		},4000);
+	});
+	// ********************* END OF Modal Contact ********************************************************************************************************************
 });
-// ********************* END OF CONTACT FROM *********************
