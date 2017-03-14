@@ -162,6 +162,9 @@ section {
 .margin-top-16px{
 	margin-top: 16px;
 }
+.margin-bottom-0 {
+  margin-bottom: 0;
+}
 .margin-bottom-16px{
 	margin-bottom: 16px;
 }
@@ -1006,8 +1009,21 @@ p.answer{
 /*******************************************************************************************************************************************/
 /*******************************************************************************************************************************************/
 /*******************************************************************************************************************************************/
+.anchor .nav-tabs {
+	border-bottom: none;
+	margin-bottom: -2px;
+}
+.anchor .nav-tabs > li.active > a, .anchor .nav-tabs > li.active > a:hover, .anchor .nav-tabs > li.active > a:focus {
+  color: #424242;
+	background-color: #7dc9fa;
+	border: none;
+}
 .setsumon{
-	background-color: #F5F5F5;
+	background-color: #7dc9fa;
+}
+.setsumon .container {
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 .setsumon .row{
 	margin-bottom: 16px;
@@ -1016,7 +1032,7 @@ p.answer{
 	content: '';
   white-space: pre;
 	color: #0CADF6;
-  border: #0CADF6 solid 1px;
+  border: #0CADF6 dotted 1px;
 	border-radius: 2px;
 	padding: 4px 8px;
 	line-height: 2.5;
@@ -1030,6 +1046,16 @@ p.answer{
 .anchor-header.shikounomokuji:before {
 	content: '思考の目次\A';
 }
+.shikounomokuji li {
+  margin-top: 8px;
+}
+.anchor-header.kaitou-zantei {
+	margin-bottom: 64px;
+}
+.anchor-header.kaitou-zantei:before {
+	content: '暫定解\A';
+}
+
 
 /*******************************************************************************************************************************************/
 /*******************************************************************************************************************************************/
@@ -1076,19 +1102,19 @@ div.kodama div:first-child {
 	background-image: url("/img/team/kodama.jpg");
 }
 div.kodama div:last-child span:before {
-	content: '（こだま）';
+	content: '[こだま]';
 }
 div.kameoka div:first-child {
 	background-image: url("/img/team/kameoka.jpg");
 }
 div.kameoka div:last-child span:before {
-	content: '（かめ）';
+	content: '[かめ]';
 }
 div.taniguchi div:first-child {
 	background-image: url("/img/team/taniguchi.jpg");
 }
 div.taniguchi div:last-child span:before {
-	content: '（ユージン）';
+	content: '[ユージン]';
 }
 @media(max-width:991px) {
 	div.discussion div:first-child {
