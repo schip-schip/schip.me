@@ -156,11 +156,14 @@ section {
 	margin-top: 8px;
 	margin-right: 8px;
 }
+.margin-top-16px{
+	margin-top: 16px;
+}
 .margin-top-48px{
 	margin-top: 48px;
 }
-.margin-top-16px{
-	margin-top: 16px;
+.margin-top-64px{
+	margin-top: 64px;
 }
 .margin-bottom-0 {
   margin-bottom: 0;
@@ -170,6 +173,9 @@ section {
 }
 .margin-bottom-32px{
 	margin-bottom: 32px;
+}
+.margin-bottom-64px{
+	margin-bottom: 64px;
 }
 .padding-top-100{
   padding-top: 100px;
@@ -1049,11 +1055,23 @@ p.answer{
 .shikounomokuji li {
   margin-top: 8px;
 }
-.anchor-header.kaitou-zantei {
-	margin-bottom: 64px;
-}
 .anchor-header.kaitou-zantei:before {
 	content: '暫定解\A';
+}
+.anchor-header.kaitou-a:before {
+	content: 'A社の解答\A';
+}
+.anchor-header.kaitou-b:before {
+	content: 'B社の解答\A';
+}
+.anchor-header.kaitou-c:before {
+	content: 'C社の解答\A';
+}
+.anchor-header.kaitou-d:before {
+	content: 'D社の解答\A';
+}
+.anchor-header.saiten:before {
+	content: 'Schip採点';
 }
 
 
