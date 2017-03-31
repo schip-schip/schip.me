@@ -56,6 +56,9 @@ p,h1,h2,h3,h4{
 .gray {
 	color: #989da0;
 }
+.blue {
+	color: #0CADF6;
+}
 
 /** Tap OR Clip **/
 a {
@@ -89,13 +92,13 @@ a {
 .btn.btn-blue:hover,.btn.btn-blue.hover {
 	background: #31b9ff;
 }
-.btn.btn-blue-fill {
+.btn.btn-blue-ghost {
 	color: #0CADF6;
 	border-color: #0CADF6;
 	background: transparent;
 }
-.btn.btn-blue-fill:hover, .btn.btn-blue-fill.hover {
-	color: white;
+.btn.btn-blue-ghost:hover, .btn.btn-blue-ghost.hover {
+	color: #fff;
 	background: #0CADF6;
 }
 .btn.btn-white-fill {
@@ -106,15 +109,6 @@ a {
 .btn.btn-white-fill:hover, .btn.btn-white-fill.hover {
 	color: #0CADF6;
 	background: #fff;
-}
-.btn.btn-gray-fill {
-	color: #fff;
-	border-color: #fff;
-	background: transparent;
-}
-.btn.btn-gray-fill:hover, .btn.btn-gray-fill.hover {
-	border-color: #bbb;
-	background: #bbb;
 }
 .btn-lineat{
   height: 18px;
@@ -847,7 +841,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	}
 }*/
 
-/***************************************** MISSION **********************************************************************/
+/***************************************** PHILOSOPHY **********************************************************************/
 /***************************************************************************************************************************/
 .services {
 	margin-top: 40px;
