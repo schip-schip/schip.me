@@ -1139,3 +1139,17 @@ div.taniguchi div:last-child span:before {
 		margin: 8px 0px;
 	}
 }
+
+
+
+
+.RO-photo-multi{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.BL-photo-multi-item{
+	max-width: 350px;
+	margin: 8px;
+}
