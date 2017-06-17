@@ -50,10 +50,10 @@ $( document ).ready( function() {
 	$(window).load(function() {
 
 		// ********************* preloader
-		$('.ROW-preloader').fadeOut();
-		$('header').fadeIn(2000, function() {
-			$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
-		});
+		// $('.ROW-preloader').fadeOut();
+		// $('header').fadeIn(2000, function() {
+		// 	$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
+		// });
 
 		// ********************* cut section
 		$('section .cut').each(function() {
