@@ -1,8 +1,7 @@
-/*****************************************  GENERAL ******************************************/
-/********************************************************************************************/
+/**  GENERAL ******************************************/
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
-/** Typography OR Color **/
+/** General AND reset CSS **/
 body {
 	font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'Roboto', 'メイリオ', meiryo, sans-serif;
 	font-size: 18px;
@@ -453,15 +452,15 @@ ul.white-list li:before {
 	}
 }
 
-/***************************************** Preloader ******************************************/
-.preloader {
+/* STRUCTURE ROW-preloader ******************************************/
+.ROW-preloader {
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
 	height: 100%;
 	background-color: white;
 }
-.preloader img {
+.ROW-preloader img {
 	position: absolute;
 	top: calc(50% - 32px);
 	left: calc(50% - 32px);

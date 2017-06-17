@@ -49,9 +49,9 @@ $( document ).ready( function() {
 	// ********************* Window Load *********************************************************************************************************
 	$(window).load(function() {
 
-		// ********************* preloader
-		$('.preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			$('.preloader').hide();
+		// ********************* ROW-preloader
+		$('.ROW-preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+			$('.ROW-preloader').hide();
 			$('.parallax, header').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
 				$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 			});
