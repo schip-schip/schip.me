@@ -49,16 +49,11 @@ $( document ).ready( function() {
 	// ********************* Window Load *********************************************************************************************************
 	$(window).load(function() {
 
-		// ********************* ROW-preloader
-		$('.ROW-preloader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			$('.ROW-preloader').hide();
-			$('.parallax, header').addClass('animated fadeIn').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-				$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
-			});
+		// ********************* preloader
+		$('.ROW-preloader').fadeOut();
+		$('header').fadeIn(2000, function() {
+			$('.row.intro-tables').addClass('animated fadeInUp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend');
 		});
-
-		// ********************* Header height
-		$('header').height($(window).height() + 80);
 
 		// ********************* cut section
 		$('section .cut').each(function() {
