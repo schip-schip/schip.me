@@ -65,7 +65,6 @@ p,h1,h2,h3,h4{
 a {
 	text-decoration: none;
 	color: #0CADF6;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .btn {
@@ -76,7 +75,6 @@ a {
 	border: 2px solid transparent;
 	border-radius: 2px;
 	background: transparent;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .btn:hover,
@@ -185,7 +183,6 @@ section {
 	position: absolute;
 	overflow: hidden;
 	width: 100%;
-	-webkit-transform: translateZ(0);
 	-ms-transform: translateZ(0);
 	transform: translateZ(0);
 }
@@ -238,7 +235,6 @@ ul.white-list li:before {
 	color: #fff;
 	border: 2px solid white;
 	background: transparent;
-	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
 .form-control.form-white::-webkit-input-placeholder{
@@ -404,7 +400,6 @@ ul.white-list li:before {
 	cursor: pointer;
 	border: 2px solid white;
 	background: transparent;
-	-webkit-transition: background-color 0.3s;
 	transition: background-color 0.3s;
 }
 .checkbox input[type=checkbox]:focus + label:before {
@@ -419,7 +414,6 @@ ul.white-list li:before {
 	height: 8px;
 	opacity: 0;
 	background: white;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .checkbox input[type=checkbox] {
@@ -493,46 +487,22 @@ ul.white-list li:before {
     transform: translateX(300px);
   }
 }
-@-webkit-keyframes lol {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-300px);
-  }
-  33% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  66% {
-    opacity: 1;
-    -webkit-transform: translateX(0px);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(300px);
-  }
-}
 .cs-loader-inner label:nth-child(6) {
-  -webkit-animation: lol 1.5s infinite ease-in-out;
   animation: lol 1.5s infinite ease-in-out;
 }
 .cs-loader-inner label:nth-child(5) {
-  -webkit-animation: lol 1.5s 100ms infinite ease-in-out;
   animation: lol 1.5s 100ms infinite ease-in-out;
 }
 .cs-loader-inner label:nth-child(4) {
-  -webkit-animation: lol 1.5s 200ms infinite ease-in-out;
   animation: lol 1.5s 200ms infinite ease-in-out;
 }
 .cs-loader-inner label:nth-child(3) {
-  -webkit-animation: lol 1.5s 300ms infinite ease-in-out;
   animation: lol 1.5s 300ms infinite ease-in-out;
 }
 .cs-loader-inner label:nth-child(2) {
-  -webkit-animation: lol 1.5s 400ms infinite ease-in-out;
   animation: lol 1.5s 400ms infinite ease-in-out;
 }
 .cs-loader-inner label:nth-child(1) {
-  -webkit-animation: lol 1.5s 500ms infinite ease-in-out;
   animation: lol 1.5s 500ms infinite ease-in-out;
 }
 /***************************************** Navigation Bar ******************************************/
@@ -544,7 +514,6 @@ nav.navbar {
 	position: absolute;
 	z-index: 9500;
 	width: 100vw;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 	border: none; /* Bootstrap 打ち消し */
 }
@@ -582,16 +551,11 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	text-align: center;
 	opacity: 0;
 	background: rgba(255, 255, 255, 0.98);
-	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	-webkit-transform: scale(0);
-	-ms-transform: scale(0);
 	transform: scale(0);
 }
 .mobile-nav.active {
 	opacity: 1;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
 	transform: scale(1);
 }
 .mobile-nav ul {
@@ -664,11 +628,8 @@ header .typed-cursor {
 	font-size: 72px;
 	margin: 0 8px;
 	color: #0CADF6;
-	-webkit-animation-name: flash;
 	animation-name: flash;
-	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 @media(max-width:992px) {
@@ -714,7 +675,6 @@ header .typed-cursor {
 footer {
 	padding: 140px 0 40px;
 	background: url('../img/footer.png');
-	-webkit-background-size: cover;
 	background-size: cover;
 }
 footer .trial-button {
@@ -730,11 +690,8 @@ footer .open-blink {
 	margin: 0 20px;
 	border-radius: 50%;
 	background-color: #4caf50;
-	-webkit-animation-name: flash;
 	animation-name: flash;
-	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
-	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
 footer .open-blink:before {
@@ -793,7 +750,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
   opacity: 0;
 }
 .intro-table {
-	-webkit-background-size: cover;
 	background-size: cover;
 	background-repeat: repeat;
 	background-position: 0% 0%;
@@ -808,13 +764,10 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	background-image: url('../img/serviceConnect.png');
 }
 .intro-table-hover {
-	-webkit-transition: background-image 0.3s ease, background-position 0.3s;
 	transition: background-image 0.3s ease, background-position 0.3s;
 }
 .intro-table-hover .product.description {
-	-webkit-transform: translateY(200px);
 	transform: translateY(200px);
-	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 }
 .intro-table-hover:hover, .intro-table-hover.hover {
@@ -824,24 +777,17 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	margin: 30px;
 	margin-top: 120px;
 	opacity: 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s ease, opacity 0.3s;
-	-webkit-transform: scale(0.6);
-	-ms-transform: scale(0.6);
 	transform: scale(0.6);
 }
 .intro-table-hover:hover .product.description, .intro-table-hover.hover .product.description {
-	-webkit-transform: translateY(80px);
 	transform: translateY(80px);
 }
 .intro-table-hover:hover .btn, .intro-table-hover.hover .btn {
 	opacity: 1;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
 	transform: scale(1);
 }
 .intro-table-hover .hide-hover {
-	-webkit-transition: opacity 0.3s ease;
 	transition: opacity 0.3s ease;
 }
 .intro-table-hover:hover .hide-hover, .intro-table-hover.hover .hide-hover {
@@ -921,7 +867,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	margin: 40px 0;
 	text-align: center;
 	border: 1px solid #ddd;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .service:hover, .service.hover {
@@ -934,7 +879,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	margin-bottom: 40px;
 	padding: 10px;
 	background: white;
-	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
 .service .icon-holder > img.icon {
@@ -946,7 +890,6 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .service .heading3 {
 	position: relative;
 	top: 80px;
-	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .service:hover .heading3, .service.hover .heading3 {
@@ -956,16 +899,11 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	width: 80%;
 	margin: 0 auto;
 	opacity: 0;
-	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	-webkit-transform: scale(0);
-	-ms-transform: scale(0);
 	transform: scale(0);
 }
 .service:hover .description, .service.hover .description {
 	opacity: 1;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
 	transform: scale(1);
 }
 /**************************************************************** NEWS ****************************************************************/
@@ -998,7 +936,6 @@ section#news .cut.cut-bottom{
 	padding-top: 60px;
 	opacity: 0;
 	background: rgba(0, 168, 255, 0.9);
-	-webkit-transition: opacity 0.45s ease;
 	transition: opacity 0.45s ease;
 }
 .team:hover .cover .overlay, .team.hover .cover .overlay {
