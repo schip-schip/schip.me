@@ -928,8 +928,7 @@ section#news .cut.cut-bottom{
 	margin: 80px 0;
 	padding-bottom: 60px;
 	background: white;
-  border: 1px solid #ddd;
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 19px 38px rgba(0,0,0,0.08), 0 10px 12px rgba(0,0,0,0.02);
 }
 .team .cover .overlay {
 	height: 250px;
@@ -947,6 +946,7 @@ section#news .cut.cut-bottom{
 	margin-top: -60px;
 	border-radius: 50%;
 	width: 160px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .team .description {
 	margin: 50px 0;
