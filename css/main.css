@@ -3,7 +3,7 @@
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 
-/** General AND reset CSS **/
+/** General AND reset CSS *******************************************************************************************************/
 body {
 	font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'Roboto', 'メイリオ', meiryo, sans-serif;
 	font-size: 18px;
@@ -61,7 +61,7 @@ p,h1,h2,h3,h4{
 	color: #0CADF6;
 }
 
-/** Tap OR Clip **/
+/** ACTION *******************************************************************************************************/
 a {
 	text-decoration: none;
 	color: #0CADF6;
@@ -216,7 +216,7 @@ ul.white-list li:before {
 }
 
 
-/* Form Control */
+/* Form Control *******************************************************************************************************/
 
 .form-control {
 	font-size: 18px;
@@ -282,7 +282,7 @@ ul.white-list li:before {
 	}
 }
 
-/* Popup */
+/* Popup *******************************************************************************************************/
 .modal-dialog{
   margin: 10vh 20vw;
 	width: 100%;
@@ -379,7 +379,7 @@ ul.white-list li:before {
 	}
 }
 
-/* Checkbox */
+/* Checkbox *******************************************************************************************************/
 .checkbox-holder {
 	white-space: nowrap;
 }
@@ -432,8 +432,17 @@ ul.white-list li:before {
 	white-space: normal;
 	color: #fff;
 }
+/** table *******************************************************************************************************/
 
-/** other contents **/
+table.ROW-info-table th{
+	padding: 4px 8px 4px 0;
+	margin-right: 8px;
+}
+table.ROW-info-table td{
+	padding: 8px 4px;
+}
+
+/** other contents *******************************************************************************************************/
 .img-80{
 	width: 80%;
 	height: auto;
