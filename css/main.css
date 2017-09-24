@@ -11,6 +11,7 @@ body {
 	color: #424242;
 	overflow-x: hidden;
 }
+/** Text *******************************************************************************************************/
 p,h1,h2,h3,h4{
 	margin: 16px 0;
 }
@@ -26,6 +27,9 @@ p,h1,h2,h3,h4{
 .heading3 {
 	font-size: 24px;
 	position: relative;
+}
+.UTL-spacingPragraph {
+	line-height: 2.2;
 }
 @media(max-width:992px) {
 	body{
@@ -59,7 +63,9 @@ p,h1,h2,h3,h4{
 .blue {
 	color: #0CADF6;
 }
-
+.UTIL-highlightPink {
+	color: #EC6983;
+}
 /** ACTION *******************************************************************************************************/
 a {
 	text-decoration: none;
@@ -212,10 +218,7 @@ ul.white-list li:before {
 	  -webkit-padding-start: 20px;
 	}
 }
-
-
 /* Form Control *******************************************************************************************************/
-
 .form-control {
 	font-size: 18px;
 	position: relative;
@@ -431,7 +434,6 @@ ul.white-list li:before {
 	color: #fff;
 }
 /** table *******************************************************************************************************/
-
 table.ROW-info-table th{
 	padding: 4px 8px 4px 0;
 	margin-right: 8px;
