@@ -936,6 +936,7 @@ section#news .cut.cut-bottom{
 	padding-bottom: 60px;
 	background: white;
   box-shadow: 0 19px 38px rgba(0,0,0,0.08), 0 10px 12px rgba(0,0,0,0.02);
+	border-radius: 5px;
 }
 .team .cover .overlay {
 	height: 250px;
