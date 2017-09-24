@@ -125,11 +125,6 @@ $( document ).ready( function() {
 
 	window.addEventListener('scroll', onScroll, false);
 
-	// ********************* Window Resize ********************************************************************************************************************
-	$(window).resize(function() {
-		$('header').height($(window).height());
-	});
-
 	// ********************* Nav Click ********************************************************************************************************************
 	$('body').on('click', 'nav.original .navbar-nav a:not([data-toggle])', function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
