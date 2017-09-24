@@ -10,8 +10,8 @@ body {
 	line-height: 1.2;
 	color: #424242;
 	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
 }
 p,h1,h2,h3,h4{
 	margin: 16px 0;
@@ -73,8 +73,7 @@ a {
 	display: inline-block;
 	padding: 15px 30px;
 	color: white;
-	border: 2px solid transparent;
-	border-radius: 2px;
+	border-radius: 5px;
 	background: transparent;
 	transition: all 0.3s ease;
 }
@@ -94,7 +93,7 @@ a {
 }
 .btn.btn-blue-ghost {
 	color: #0CADF6;
-	border-color: #0CADF6;
+	border: 2px solid #0CADF6;
 	background: transparent;
 }
 .btn.btn-blue-ghost:hover, .btn.btn-blue-ghost.hover {
@@ -103,7 +102,7 @@ a {
 }
 .btn.btn-white-fill {
 	color: #fff;
-	border-color: #fff;
+	border: 2px solid #fff;
 	background: transparent;
 }
 .btn.btn-white-fill:hover, .btn.btn-white-fill.hover {
