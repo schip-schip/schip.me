@@ -4,10 +4,19 @@
 			<div class="header-text">
 				<div class="row margin-top-48px">
 					<div class="col-md-12 text-center">
-						<p class="heading2 white typed">{{ include.content }}</p>
+						<p class="heading2 white typed" id="HEADER-TITLE">{{ include.content }}</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
+<!-- MIKAN JS -->
+<script src="/js/mikan.js"></script>
+<script>
+	(function () {
+		var text = document.getElementById('HEADER-TITLE').innerHTML;
+		text = Mikan(text);
+	}());
+</script>
+<!-- END OF MIKAN JS -->
