@@ -457,6 +457,14 @@ table.ROW-info-table td{
 	}
 }
 
+/* UTILITIES ******************************************/
+.UTL-flexbox-middle-center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /* STRUCTURE ROW-preloader ******************************************/
 .ROW-preloader {
 	position: fixed;
