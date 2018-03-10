@@ -620,7 +620,7 @@ header .container {
 	height: 100%;
 }
 header .ROW-header-inContainer{
-	padding: 160px 0 130px 0;
+	padding: 160px 0;
   display: flex;
   justify-content: center;
   align-items: center;
