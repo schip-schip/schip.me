@@ -11,8 +11,11 @@ body {
 	color: #424242;
 	overflow-x: hidden;
 }
+h1,h2,h3,h4 {
+	margin: 0;
+}
 /** Text *******************************************************************************************************/
-p,h1,h2,h3,h4{
+p {
 	margin: 16px 0;
 }
 .heading1 {
@@ -464,7 +467,18 @@ table.ROW-info-table td{
     justify-content: center;
     align-items: center;
 }
-
+.UTL__cutBottom {
+  position: relative;
+	padding: 80px 0;
+}
+.UTL__cutBottom:after {
+  content: ' ';
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  border-top: 80px solid transparent;
+  border-right: 100vw solid white;
+}
 /* STRUCTURE ROW-preloader ******************************************/
 .ROW-preloader {
 	position: fixed;
@@ -609,46 +623,37 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 
 /*STRUCTURE HEADER ******************************************/
-header {
+.ROW-header{
 	position: relative;
 	width: 100vw;
+	min-height: 400px;
 	background-image: url('/img/header.png');
 	background-position-y: bottom;
 	background-size: cover;
-}
-header .container {
-	height: 100%;
-}
-header .ROW-header-inContainer{
-	padding: 160px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
-@media(max-width:992px) {
-	header .ROW-header-inContainer{
-		padding: 120px 0 80px 0;
-	}
+.ROW-header-topPage{
+	height: 100vh
 }
-.BLK-headerTitle {
+.PRT__headerTitle{
 	font-size: 24px;
 	color: #fff;
-  line-height: 1.5;
+	text-align: center;
+	line-height: 1.5;
 }
-.copy-main{
+.PAT__headerTitle__copy{
 	font-size: 60px;
-	color: #fff;
-	margin: 8px 0;
+	margin: 18px 0 0 16px; /*カーソル分の視差効果補正で左マージン*/
 	display: inline-block;
 }
-.copy-sub{
+.PAT__headerTitle__subcopy{
 	font-size: 30px;
 	margin: 8px 0;
-	color: #fff;
 	font-weight: 300;
 }
-header .typed-cursor {
+header .PRT__typedCursor {
 	font-size: 72px;
 	margin: 0 8px;
 	color: #0CADF6;
@@ -657,49 +662,14 @@ header .typed-cursor {
 	animation-iteration-count: infinite;
 }
 @media(max-width:992px) {
-	.copy-main {
+	.PAT__headerTitle__copy {
 		font-size: 36px;
 	}
-	.copy-sub{
+	.PAT__headerTitle__subcopy{
 		font-size: 24px;
 	}
-	header .typed-cursor {
-	    font-size: 46px;
-			margin: 0 8px;
-	}
-}
-/***************************************** CUT-TOP ******************************************/
-/********************************************************************************************/
-.cut-top {
-	content: ' ';
-	position: absolute;
-	z-index: 1;
-	top: -80px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-top: 80px solid transparent;
-	border-right: 0px solid white;
-}
-.cut-bottom {
-	content: ' ';
-	position: absolute;
-	z-index: 1;
-	bottom: -80px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border-bottom: 80px solid transparent;
-	border-left: 0px solid white;
-}
-@media(max-width:992px) {
-	.cut-top{
-		top: -40px;
-		border-top: 40px solid transparent;
-	}
-	.cut-bottom {
-		bottom: -40px;
-		border-bottom: 40px solid transparent;
+	.PRT__typedCursor {
+    font-size: 46px;
 	}
 }
 /**************************************************************** FOOTER ****************************************************************/
@@ -933,15 +903,15 @@ header.ROW-heroHeader {
 	opacity: 1;
 	transform: scale(1);
 }
+#philosophy.UTL__cutBottom:after {
+	border-right-color: #7dc9fa;
+}
 /**************************************************************** NEWS ****************************************************************/
 /*********************************************************************************************************************************************/
 
 section#news{
   background: #7dc9fa;
 	padding-bottom: 64px;
-}
-section#news .cut.cut-bottom{
-	border-left-color: #7dc9fa;
 }
 #news span:after{
 	content: '　\f0a9';
