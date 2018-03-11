@@ -548,6 +548,9 @@ nav.navbar {
 nav.navbar .navbar-nav li.active a:not(.btn) {
 	color: #0CADF6 !important;
 }
+.navbar-nav > li > a {
+	font-weight: 500;
+}
 nav.navbar-fixed-top {
 	z-index: 9499;
 	top: 0;
@@ -618,6 +621,10 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 		top: 32px;
 	}
 }
+.navbar-nav > li > a.selected {
+	border-bottom: solid 2px #0CADF6;
+}
+
 /*STRUCTURE HEADER ******************************************/
 .ROW-header{
 	position: relative;
@@ -962,9 +969,6 @@ section#news{
 }
 
 /*****************************************                  branch pages               ******************************************/
-.navbar-nav > li > a.selected {
-	border-bottom: solid 2px #0CADF6;
-}
 p.question{
 	margin-top: 24px;
 }
