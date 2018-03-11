@@ -444,8 +444,7 @@ table.ROW-info-table th{
 table.ROW-info-table td{
 	padding: 8px 4px;
 }
-
-/** other contents *******************************************************************************************************/
+/* UTILITIES ******************************************/
 .img-80{
 	width: 80%;
 	height: auto;
@@ -459,8 +458,6 @@ table.ROW-info-table td{
 		width: 100%;
 	}
 }
-
-/* UTILITIES ******************************************/
 .UTL-flexbox-middle-center {
     display: flex;
     flex-flow: row nowrap;
@@ -469,14 +466,15 @@ table.ROW-info-table td{
 }
 .UTL__cutBottom {
   position: relative;
-	padding: 80px 0;
+	padding: 4vh 0;
 }
 .UTL__cutBottom:after {
   content: ' ';
   position: absolute;
   z-index: 1;
   bottom: 0;
-  border-top: 80px solid transparent;
+  left: 0;
+  border-top: 4vh solid transparent;
   border-right: 100vw solid white;
 }
 /* STRUCTURE ROW-preloader ******************************************/
@@ -536,8 +534,7 @@ table.ROW-info-table td{
 .cs-loader-inner label:nth-child(1) {
   animation: lol 1.5s 500ms infinite ease-in-out;
 }
-/***************************************** Navigation Bar ******************************************/
-/***************************************************************************************************/
+/* STRUCTURE Navigation Bar ******************************************/
 .navbar {
 	top: 50px;
 }
@@ -556,7 +553,7 @@ nav.navbar-fixed-top {
 	top: 0;
 	position: fixed;
   margin-top: 0px;
-	padding: 25px 0;
+  padding: 12px 0;
 	opacity: 0;
 	background: white;
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
@@ -621,7 +618,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 		top: 32px;
 	}
 }
-
 /*STRUCTURE HEADER ******************************************/
 .ROW-header{
 	position: relative;
@@ -672,9 +668,7 @@ header .PRT__typedCursor {
     font-size: 46px;
 	}
 }
-/**************************************************************** FOOTER ****************************************************************/
-/*********************************************************************************************************************************************/
-
+/*STRUCTURE FOOTER ******************************************/
 footer {
 	padding: 140px 0 40px;
 	background: url('../img/footer.png');
@@ -731,10 +725,10 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	color: #0CADF6;
 }
 
-/*****************************************                  Index.html               ******************************************/
-/***************************************** INTRO-TABLE */
-header.ROW-heroHeader {
-	height: 100vh;
+/*Structure INTRO-TABLE ******************************************/
+.ROW-serviceCard {
+	margin-top: -160px;
+	background-color: transparent;
 }
 @media(min-width:992px){
 	.container.intro-tables{
@@ -742,7 +736,6 @@ header.ROW-heroHeader {
 	}
 }
 .row.intro-tables {
-	top: -170px;
 	position: relative;
   opacity: 0;
 }
