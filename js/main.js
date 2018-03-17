@@ -64,13 +64,12 @@ $( document ).ready( function() {
 		});
 
 		// ********************* Navbar Init
-		$('nav').clone().insertAfter('nav').addClass('navbar-fixed-top').removeClass('original');
-		$('.mobile-nav ul').html($('nav .navbar-nav').html());
+		$('.mobile-nav ul').html($('.ROW__navbar .navbar-nav').html());
 
 		// ********************* Onepage Nav
-		$('.navbar.navbar-fixed-top .navbar-nav').onePageNav({
+		$('.ROW__navbar .navbar-nav').onePageNav({
 			currentClass: 'active',
-			changeHash: false,
+			changeHash: true,
 			scrollSpeed: 400
 		});
 
@@ -105,12 +104,10 @@ $( document ).ready( function() {
 
 	// ********************* Window Scroll ********************************************************************************************************************
 	function onScroll() {
-		if ($(window).scrollTop() > 50) {
-			$('nav.original').css('opacity', '0');
-			$('nav.navbar-fixed-top').css('opacity', '1');
+		if ($(window).scrollTop() > 30) {
+			$('.ROW__navbar').addClass('navbar-fixed-top').removeClass('ROW__navbar--original');
 		} else {
-			$('nav.original').css('opacity', '1');
-			$('nav.navbar-fixed-top').css('opacity', '0');
+			$('.ROW__navbar').addClass('ROW__navbar--original').removeClass('navbar-fixed-top');
 		}
 	}
 
@@ -126,7 +123,7 @@ $( document ).ready( function() {
 	window.addEventListener('scroll', onScroll, false);
 
 	// ********************* Nav Click ********************************************************************************************************************
-	$('body').on('click', 'nav.original .navbar-nav a:not([data-toggle])', function() {
+	$('body').on('click', '.ROW__navbar.ROW__navbar--original .navbar-nav a:not([data-toggle])', function() {
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			event.stopPropagation();
 			var target = $(this.hash);
@@ -142,7 +139,7 @@ $( document ).ready( function() {
 
 	// ********************* Mobile Nav Open ********************************************************************************************************************
 	// Mobile Nav OPEN & LOCK SCROLL
-	$('body').on('click', 'nav .navbar-toggle', function() {
+	$('body').on('click', '.ROW__navbar .navbar-toggle', function() {
 		event.stopPropagation();
 		$(window).on('touchmove.noScroll', function(e) {
       e.preventDefault();

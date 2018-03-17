@@ -142,6 +142,26 @@ section {
 	position: relative;
 	z-index: 1;
 }
+.BLK__container {
+    position: relative;
+    z-index: 1;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media (min-width: 1200px){
+.BLK__container {
+    width: 1170px;
+}
+@media (min-width: 992px){
+.BLK__container {
+    width: 970px;
+}
+@media (min-width: 768px){
+.BLK__container {
+    width: 750px;
+}
 .row{
 	margin-top:16px;
 	margin-bottom:32px;
@@ -539,40 +559,44 @@ table.ROW-info-table td{
   animation: lol 1.5s 500ms infinite ease-in-out;
 }
 /* STRUCTURE Navigation Bar ******************************************/
-.navbar {
+.ROW__navbar {
 	top: 50px;
-}
-nav.navbar {
 	position: absolute;
 	z-index: 9500;
 	width: 100vw;
 	transition: all 0.3s ease;
 	border: none; /* Bootstrap 打ち消し */
 }
-nav.navbar .navbar-nav li.active a:not(.btn) {
-	color: #0CADF6 !important;
-}
-.navbar-nav > li > a {
-	font-weight: 500;
-}
-nav.navbar-fixed-top {
-	z-index: 9499;
+.ROW__navbar.navbar-fixed-top {
 	top: 0;
 	position: fixed;
   margin-top: 0px;
   padding: 12px 0;
-	opacity: 0;
 	background: white;
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
+}
+@media(max-width:991px) {
+	.ROW__navbar {
+		top: 32px;
+	}
+}
+.ROW__navbar.ROW__navbar--original .navbar-nav li a {
+	color: #fff !important;
+}
+.ROW__navbar.navbar-fixed-top .navbar-nav li a {
+	color: #bbb;
+}
+.ROW__navbar.navbar-fixed-top .navbar-nav li.active a {
+	color: #0CADF6;
+}
+.navbar-nav > li > a {
+	font-weight: 500;
 }
 .navbar-brand > img {
   position: absolute;
 }
 .navbar-collapse {
 	padding: 0; /* Bootstrap 打ち消し */
-}
-nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
-	color: #bbb;
 }
 /* Mobile Nav */
 .mobile-nav {
@@ -619,11 +643,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 }
 .icon-bar {
 	background: #bbb;
-}
-@media(max-width:991px) {
-	.navbar {
-		top: 32px;
-	}
 }
 .navbar-nav > li > a.selected {
 	border-bottom: solid 2px #0CADF6;
