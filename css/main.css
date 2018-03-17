@@ -149,18 +149,22 @@ section {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+
 }
 @media (min-width: 1200px){
-.BLK__container {
-    width: 1170px;
+	.BLK__container {
+	    width: 1170px;
+	}
 }
 @media (min-width: 992px){
 .BLK__container {
     width: 970px;
+	}
 }
 @media (min-width: 768px){
 .BLK__container {
     width: 750px;
+	}
 }
 .row{
 	margin-top:16px;
