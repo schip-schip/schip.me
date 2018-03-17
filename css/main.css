@@ -445,6 +445,10 @@ table.ROW-info-table td{
 	padding: 8px 4px;
 }
 /* UTILITIES ******************************************/
+.UTL__img100{
+	width: 100%;
+	height: auto;
+}
 .img-80{
 	width: 80%;
 	height: auto;
