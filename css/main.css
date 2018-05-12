@@ -763,6 +763,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .ROW-serviceCard {
 	margin-top: -160px;
 	background-color: transparent;
+	z-index: 2; /* 後接の<section>が被ってhoverが機能しなくなる現象を回避*/
 }
 @media(min-width:992px){
 	.container.intro-tables{
@@ -772,6 +773,12 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .row.intro-tables {
 	position: relative;
   opacity: 0;
+}
+.intro-tables .intro-table {
+	position: relative;
+	width: 100%;
+	height: 300px;
+	margin: 20px 0;
 }
 .intro-table {
 	background-size: cover;
@@ -790,12 +797,32 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 .intro-table-hover {
 	transition: background-image 0.3s ease, background-position 0.3s;
 }
+.intro-table-hover:hover, .intro-table-hover.hover {
+	background-position: 50% 50%;
+}
+.intro-table-hover .hide-hover {
+	transition: opacity 0.3s ease;
+}
+.intro-table-hover:hover .hide-hover, .intro-table-hover.hover .hide-hover {
+	opacity: 0;
+}
+.intro-tables .intro-table .product {
+	margin: 0;
+	padding: 30px;
+}
+.intro-tables .intro-table .bottom {
+	position: absolute;
+	bottom: 0;
+}
+.intro-tables .intro-table .product .description {
+	padding: 0 30px;
+}
 .intro-table-hover .product.description {
 	transform: translateY(200px);
 	transition: transform 0.3s;
 }
-.intro-table-hover:hover, .intro-table-hover.hover {
-	background-position: 50% 50%;
+.intro-table-hover:hover .product.description, .intro-table-hover.hover .product.description {
+	transform: translateY(80px);
 }
 .intro-table-hover .btn {
 	margin: 30px;
@@ -804,35 +831,9 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	transition: transform 0.3s ease, opacity 0.3s;
 	transform: scale(0.6);
 }
-.intro-table-hover:hover .product.description, .intro-table-hover.hover .product.description {
-	transform: translateY(80px);
-}
 .intro-table-hover:hover .btn, .intro-table-hover.hover .btn {
 	opacity: 1;
 	transform: scale(1);
-}
-.intro-table-hover .hide-hover {
-	transition: opacity 0.3s ease;
-}
-.intro-table-hover:hover .hide-hover, .intro-table-hover.hover .hide-hover {
-	opacity: 0;
-}
-.intro-tables .intro-table {
-	position: relative;
-	width: 100%;
-	height: 300px;
-	margin: 20px 0;
-}
-.intro-tables .intro-table .product {
-	margin: 0;
-	padding: 30px;
-}
-.intro-tables .intro-table .product .description {
-	padding: 0 30px;
-}
-.intro-tables .intro-table .bottom {
-	position: absolute;
-	bottom: 0;
 }
 /*.intro-tables .intro-table .owl-schedule .schedule-row {
 	padding: 10px 30px;
