@@ -64,7 +64,7 @@ $( document ).ready( function() {
 		});
 
 		// ********************* Navbar Init
-		$('.mobile-nav ul').html($('.ROW__navbar .navbar-nav').html());
+		$('.mobile-nav').html($('.ROW__navbar .navbar-nav').html());
 
 		// ********************* Onepage Nav
 		$('.ROW__navbar .navbar-nav').onePageNav({

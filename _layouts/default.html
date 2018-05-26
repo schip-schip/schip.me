@@ -64,24 +64,23 @@
 	</div>
 	</div>
 	<nav class="ROW__navbar ROW__navbar--original">
-		<div class="container">
-			<div class="navbar-header">
+		<div class="container BLK__navber">
+			<a class="BLK__navber__header" href="/">
+				<img src="/img/logo_both.png" alt="Schipロゴ">
+			</a>
+			<div class="BLK__navber__menu">
+				<div class="BLK__navber__menu--wide">
+					<div>{{ page.list1 }}</div>
+					<div>{{ page.list2 }}</div>
+					<div>{{ page.list3 }}</div>
+					<div>{{ page.list4 }}</div>
+					<div><a href="#footer-contact">お問い合わせ</a></div>
+				</div>
 				<button type="button" class="navbar-toggle collapsed">
-					<span class="sr-only">目次</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/" class="navbar-brand"><img src="/img/logo_both.png" alt="Schipロゴ"></a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right main-nav">
-					<li>{{ page.list1 }}</li>
-					<li>{{ page.list2 }}</li>
-					<li>{{ page.list3 }}</li>
-					<li>{{ page.list4 }}</li>
-					<li><a href="#footer-contact">お問い合わせ</a></li>
-				</ul>
 			</div>
 		</div>
 	</nav>
@@ -137,8 +136,6 @@
 	</div>
 	<!-- Holder for mobile navigation -->
 	<div class="mobile-nav">
-		<ul>
-		</ul>
 		<a href="#" class="close-link"><i class="fa fa-arrow-up"></i></a> <!-- このhrefを無くすと、JSイベントがなぜか発火しなくなる！！！ -->
 	</div>
 	<!-- Scripts -->

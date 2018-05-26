@@ -584,20 +584,52 @@ table.ROW-info-table td{
 		top: 32px;
 	}
 }
-.ROW__navbar.ROW__navbar--original .navbar-nav li a {
+.BLK__navber {
+	display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.BLK__navber__header {
+	min-width: 200px;
+	flex-grow: 1;
+}
+.BLK__navber__header > img {
+  position: absolute;
+	height: 50px;
+	width: auto;
+}
+.BLK__navber__menu{
+	flex-grow: 10;
+	height: 50px;
+}
+.BLK__navber__menu--wide{
+	display: flex;
+  justify-content: flex-end;
+	align-items: stretch;
+}
+@media(max-width:992px) {
+	.BLK__navber__menu--wide{
+		display: none;
+	}
+}
+.BLK__navber__menu--wide div {
+	height: 50px;
+	padding: 0 1.5vw;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.ROW__navbar.ROW__navbar--original .BLK__navber__menu--wide div a {
 	color: #fff !important;
 }
-.ROW__navbar.navbar-fixed-top .navbar-nav li a {
+.ROW__navbar.navbar-fixed-top .BLK__navber__menu--wide div a {
 	color: #bbb;
 }
-.ROW__navbar.navbar-fixed-top .navbar-nav li.active a {
+.ROW__navbar.navbar-fixed-top .BLK__navber__menu--wide div.active a {
 	color: #0CADF6;
 }
 .navbar-nav > li > a {
 	font-weight: 500;
-}
-.navbar-brand > img {
-  position: absolute;
 }
 .navbar-collapse {
 	padding: 0; /* Bootstrap 打ち消し */
