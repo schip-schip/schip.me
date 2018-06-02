@@ -1088,7 +1088,9 @@ p.answer{
 .PRT__blackboard {
 	font-family: "Sawarabi Mincho";
   color: rgb(255,255,255,0.9);
-  background-color: #134E00;
+	background-image:
+	  url('/img/anchor_blackboard_backgroud_track.svg'),
+	  linear-gradient(to bottom, #0B570C, #083F05);
   margin: 10px 0 10px 0;
   padding: 25px;
   border: 6px solid #a60;
