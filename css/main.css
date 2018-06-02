@@ -1,9 +1,4 @@
-:root{
-	--blue: #0CADF6;
-}
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-
-/** General AND reset CSS *******************************************************************************************************/
+/** General AND reset CSS ********************************************************************/
 body {
 	font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'Roboto', 'メイリオ', meiryo, sans-serif;
 	font-size: 18px;
@@ -11,10 +6,24 @@ body {
 	color: #424242;
 	overflow-x: hidden;
 }
+:root{
+	--blue: #0CADF6;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@font-face {
+  font-family: 'Sawarabi Mincho';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot);
+  src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff2) format('woff2'),
+       url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff) format('woff'),
+       url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.ttf) format('truetype');
+} /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */
 h1,h2,h3,h4 {
 	margin: 0;
 }
-/** Text *******************************************************************************************************/
+/** Text *************************************************************************************/
 p {
 	margin: 16px 0;
 }
@@ -1017,14 +1026,7 @@ p.answer{
 		margin-left: 0;
 	}
 }
-
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*****************************************                  Anchor 対話篇               ******************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
+/***************************************** Anchor 対話篇  ******************************************/
 .anchor .nav-tabs {
 	border-bottom: none;
 	margin-bottom: -2px;
@@ -1083,7 +1085,16 @@ p.answer{
 .anchor-header.saiten:before {
 	content: 'Schip採点';
 }
-
+.PRT__blackboard {
+	font-family: "Sawarabi Mincho";
+  color: rgb(255,255,255,0.9);
+  background-color: #134E00;
+  margin: 10px 0 10px 0;
+  padding: 25px;
+  border: 6px solid #a60;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.08), 0 10px 12px rgba(0,0,0,0.02), 1px 1px 2px rgba(0,0,0,0.6) inset;
+  line-height: 1.9;
+}
 
 /*******************************************************************************************************************************************/
 /*******************************************************************************************************************************************/
