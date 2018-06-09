@@ -1085,27 +1085,6 @@ p.answer{
 .anchor-header.saiten:before {
 	content: 'Schip採点';
 }
-.PRT__blackboard {
-	font-family: "Sawarabi Mincho";
-  color: rgb(255,255,255,0.9);
-	background-image:
-	  url('/img/anchor_blackboard_backgroud_track.svg'),
-	  linear-gradient(to bottom, #0B570C, #083F05);
-  margin: 10px 0 10px 0;
-  padding: 25px;
-  border: 6px solid #a60;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.08), 0 10px 12px rgba(0,0,0,0.02), 1px 1px 2px rgba(0,0,0,0.6) inset;
-  line-height: 1.9;
-}
-
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*****************************************                  butsugi               ******************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-/*******************************************************************************************************************************************/
-
 div.discussion {
 	display: flex;
 	align-items: center;
@@ -1128,6 +1107,7 @@ div.discussion div:last-child {
 	min-height: 80px;
 	display: flex;
   align-items: center;
+	line-height: 1.5;
 }
 div.discussion div:last-child:before {
 	position: absolute;
@@ -1169,8 +1149,66 @@ div.taniguchi div:last-child span:before {
 	}
 }
 
-
-
+.PRT__blackboard {
+	font-family: "Sawarabi Mincho";
+  color: rgb(255,255,255,0.9);
+	background-image:
+	  url('/img/anchor_blackboard_backgroud_track.svg'),
+	  linear-gradient(to bottom, #0B570C, #083F05);
+  margin: 10px 0 10px 0;
+  padding: 25px;
+  border: 6px solid #a60;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.08), 0 10px 12px rgba(0,0,0,0.02), 1px 1px 2px rgba(0,0,0,0.6) inset;
+  line-height: 1.9;
+}
+blockquote {
+		font-size: 0.93em;
+	  border-left: none;
+    position: relative;
+    padding: 20px 24px 20px 48px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #f7f7f7;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+		margin: 16px 0px 16px 12px;
+}
+blockquote:before{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: -15px;
+    width: 40px;
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    content: "\f10d";
+    font-family: FontAwesome;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 30px;
+    background: #92d4ff;
+    box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
+}
+blockquote:after{
+    position: absolute;
+    content: '';
+    top: 40px;
+    left: -15px;
+    border: none;
+    border-bottom: solid 8px transparent;
+    border-right: solid 15px #6eb3e0;
+}
+blockquote p {
+    position: relative;
+    margin: 10px 0;
+    line-height: 1.7;
+}
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
 
 .RO-photo-multi{
 	display: flex;
