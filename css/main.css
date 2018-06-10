@@ -1101,23 +1101,33 @@ div.discussion div:last-child {
 	position: relative;
 	margin: 16px 0px;
 	flex-grow: 1;
-	background: #7dc9fa;
-	border-radius: 16px;
-	padding: 16px 4px 16px 16px;
+	border: 3px solid #0CADF6;
+	padding: 24px 18px 24px 20px;
 	min-height: 80px;
 	display: flex;
   align-items: center;
 	line-height: 1.5;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.02);
 }
 div.discussion div:last-child:before {
+	content: "";
 	position: absolute;
-	right: 100%;
 	top: 50%;
-	border: solid transparent;
-	border-right-color: #7dc9fa;
-	border-width: 12px;
-	content: " ";
-	pointer-events: none;
+	left: -24px;
+	margin-top: -12px;
+	border: 12px solid transparent;
+	border-right: 12px solid #FFF;
+	z-index: 2;
+}
+div.discussion div:last-child:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+ 	margin-top: -14px;
+	border: 14px solid transparent;
+	border-right: 14px solid #0CADF6;
+ 	z-index: 1;
 }
 div.kodama div:first-child {
 	background-image: url("/img/team/kodama.jpg");
