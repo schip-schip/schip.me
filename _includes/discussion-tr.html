@@ -1,4 +1,8 @@
 <div class="discussion {{ include.person }}">
-  <div></div>
-  <div><span><br>{{ include.content }}</span></div>
+  <div class="BLK__discussion--metaInfo">
+    <div></div>
+    <div></div>
+  </div>
+  <div class="BLK__discussion--content"><span>{{ include.content }}</span></div>
+  <!-- spanを削除するとB要素が横に並んでしまう -->
 </div>
