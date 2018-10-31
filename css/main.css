@@ -1028,9 +1028,19 @@ p.answer{
 	}
 }
 /***************************************** Anchor 対話篇  ******************************************/
-.anchor .nav-tabs {
+.anchor .nav-tabs > li {
 	border-bottom: none;
-	margin-bottom: -2px;
+	margin-bottom: -3px;
+}
+@media(max-width:991px) {
+	.anchor .nav-tabs li a {
+		padding: 10px 8px;
+	}
+}
+@media(max-width:320px) {
+	.anchor .nav-tabs li a {
+		padding: 10px 4px;
+	}
 }
 .anchor .nav-tabs > li.active > a, .anchor .nav-tabs > li.active > a:hover, .anchor .nav-tabs > li.active > a:focus {
 	color: #fff;
