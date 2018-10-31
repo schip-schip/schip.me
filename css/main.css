@@ -8,6 +8,7 @@ body {
 }
 :root{
 	--blue: #0CADF6;
+	--blue_bg: #7dbffa;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @font-face {
@@ -941,13 +942,13 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	transform: scale(1);
 }
 #philosophy.UTL__cutBottom:after {
-	border-right-color: #7dc9fa;
+	border-right-color: var(--blue_bg);
 }
 /**************************************************************** NEWS ****************************************************************/
 /*********************************************************************************************************************************************/
 
 section#news{
-  background: #7dc9fa;
+  background: var(--blue_bg);
 	padding-bottom: 64px;
 }
 #news span:after{
@@ -1032,12 +1033,13 @@ p.answer{
 	margin-bottom: -2px;
 }
 .anchor .nav-tabs > li.active > a, .anchor .nav-tabs > li.active > a:hover, .anchor .nav-tabs > li.active > a:focus {
-  color: #424242;
-	background-color: #7dc9fa;
+	color: #fff;
+	background-color: var(--blue_bg);
 	border: none;
 }
 .setsumon{
-	background-color: #7dc9fa;
+	background-color: var(--blue_bg);
+	color: #fff;
 }
 .setsumon .container {
 	padding-top: 16px;
