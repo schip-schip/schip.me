@@ -8,6 +8,7 @@ body {
 }
 :root{
 	--blue: #0CADF6;
+	--blue_bg: #7dbffa;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @font-face {
@@ -73,7 +74,7 @@ p {
 	color: #989da0;
 }
 .blue {
-	color: #0CADF6;
+	color: var(--blue);
 }
 .UTIL-highlightPink {
 	color: #EC6983;
@@ -81,7 +82,7 @@ p {
 /** ACTION *******************************************************************************************************/
 a {
 	text-decoration: none;
-	color: #0CADF6;
+	color: var(--blue);
 	transition: all 0.3s ease;
 }
 .btn {
@@ -102,19 +103,19 @@ a {
 	color: white;
 }
 .btn.btn-blue {
-	background: #0CADF6;
+	background: var(--blue);
 }
 .btn.btn-blue:hover,.btn.btn-blue.hover {
 	background: #31b9ff;
 }
 .btn.btn-blue-ghost {
-	color: #0CADF6;
-	border: 2px solid #0CADF6;
+	color: var(--blue);
+	border: 2px solid var(--blue);
 	background: transparent;
 }
 .btn.btn-blue-ghost:hover, .btn.btn-blue-ghost.hover {
 	color: #fff;
-	background: #0CADF6;
+	background: var(--blue);
 }
 .btn.btn-white-fill {
 	color: #fff;
@@ -122,7 +123,7 @@ a {
 	background: transparent;
 }
 .btn.btn-white-fill:hover, .btn.btn-white-fill.hover {
-	color: #0CADF6;
+	color: var(--blue);
 	background: #fff;
 }
 .btn-lineat{
@@ -289,7 +290,7 @@ ul.white-list li:before {
 }
 .form-control.btn-submit {
 	margin-top: 30px;
-	color: #0CADF6;
+	color: var(--blue);
 	background: #fff;
 }
 .form-control.btn-submit:hover, .form-control.btn-submit.hover {
@@ -330,7 +331,7 @@ ul.white-list li:before {
 	height: 80vh;
 	padding: 45px 30px;
 	text-align: center;
-	background-color: #0CADF6;
+	background-color: var(--blue);
 	box-shadow: none;
 	border-radius: 2px;
 	overflow: scroll;
@@ -383,11 +384,11 @@ ul.white-list li:before {
 .popup-form .dropdown .dropdown-menu li a {
 	width: 100%;
 	padding: 15px 30px;
-	color: #0CADF6;
+	color: var(--blue);
 }
 .popup-form .dropdown .dropdown-menu li:hover a, .popup-form .dropdown .dropdown-menu li.hover a {
 	color: #fff;
-	background: #0CADF6;
+	background: var(--blue);
 }*/
 @media(max-width:991px) {
 	.modal-dialog{
@@ -600,7 +601,7 @@ table.ROW-info-table td{
 	color: #bbb;
 }
 .ROW__navbar.navbar-fixed-top .navbar-nav li.active a {
-	color: #0CADF6;
+	color: var(--blue);
 }
 .navbar-nav > li > a {
 	font-weight: 500;
@@ -652,13 +653,13 @@ table.ROW-info-table td{
 	width: 100%;
 	padding: 15px 0;
 	color: #fff;
-	background: #0CADF6;
+	background: var(--blue);
 }
 .icon-bar {
 	background: #bbb;
 }
 .navbar-nav > li > a.selected {
-	border-bottom: solid 2px #0CADF6;
+	border-bottom: solid 2px var(--blue);
 }
 
 /*STRUCTURE HEADER ******************************************/
@@ -695,7 +696,7 @@ table.ROW-info-table td{
 header .PRT__typedCursor {
 	font-size: 72px;
 	margin: 0 8px;
-	color: #0CADF6;
+	color: var(--blue);
 	animation-name: flash;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -765,7 +766,7 @@ footer .social-footer li a {
 	color: #fff;
 }
 footer .social-footer li:hover a, footer .social-footer li.hover a {
-	color: #0CADF6;
+	color: var(--blue);
 }
 
 /*Structure INTRO-TABLE ******************************************/
@@ -904,7 +905,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	transition: all 0.3s ease;
 }
 .service:hover, .service.hover {
-	border-color: #0CADF6;
+	border-color: var(--blue);
 }
 .service .icon-holder {
 	position: relative;
@@ -941,13 +942,13 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	transform: scale(1);
 }
 #philosophy.UTL__cutBottom:after {
-	border-right-color: #7dc9fa;
+	border-right-color: var(--blue_bg);
 }
 /**************************************************************** NEWS ****************************************************************/
 /*********************************************************************************************************************************************/
 
 section#news{
-  background: #7dc9fa;
+  background: var(--blue_bg);
 	padding-bottom: 64px;
 }
 #news span:after{
@@ -1027,17 +1028,28 @@ p.answer{
 	}
 }
 /***************************************** Anchor 対話篇  ******************************************/
-.anchor .nav-tabs {
+.anchor .nav-tabs > li {
 	border-bottom: none;
-	margin-bottom: -2px;
+	margin-bottom: -3px;
+}
+@media(max-width:991px) {
+	.anchor .nav-tabs li a {
+		padding: 10px 8px;
+	}
+}
+@media(max-width:320px) {
+	.anchor .nav-tabs li a {
+		padding: 10px 4px;
+	}
 }
 .anchor .nav-tabs > li.active > a, .anchor .nav-tabs > li.active > a:hover, .anchor .nav-tabs > li.active > a:focus {
-  color: #424242;
-	background-color: #7dc9fa;
+	color: #fff;
+	background-color: var(--blue_bg);
 	border: none;
 }
 .setsumon{
-	background-color: #7dc9fa;
+	background-color: var(--blue_bg);
+	color: #fff;
 }
 .setsumon .container {
 	padding-top: 16px;
@@ -1049,8 +1061,8 @@ p.answer{
 .anchor-header:before {
 	content: '';
   white-space: pre;
-	color: #0CADF6;
-  border: #0CADF6 dotted 1px;
+	color: var(--blue);
+  border: var(--blue) dotted 1px;
 	border-radius: 2px;
 	padding: 4px 8px;
 	line-height: 2.5;
@@ -1131,7 +1143,7 @@ div.discussion div.BLK__discussion--content {
 	position: relative;
 	margin: 16px 0px;
 	flex-grow: 1;
-	border: 3px solid #0CADF6;
+	border: 3px solid var(--blue);
 	padding: 30px 18px 24px 20px;
 	min-height: 80px;
 	display: flex;
@@ -1156,7 +1168,7 @@ div.discussion div.BLK__discussion--content:after{
 	left: -30px;
  	margin-top: -14px;
 	border: 14px solid transparent;
-	border-right: 14px solid #0CADF6;
+	border-right: 14px solid var(--blue);
  	z-index: 1;
 }
 @media(max-width:991px) {
