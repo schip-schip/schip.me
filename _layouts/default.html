@@ -123,21 +123,13 @@
 					<p class="white form-contact-label hidden">お名前</p>
 					<input name="お名前" type="text" class="form-control form-white" placeholder="お名前 [必須]" required="required" data-validation-engine="validate[required]" data-formrun-required>
 					<p class="white form-contact-label hidden">メールアドレス</p>
-					<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]" required="required" data-validation-engine="validate[required,custom[email]]" data-formrun-type="email" data-formrun-required>
+					<input name="メールアドレス" type="email" class="form-control form-white" placeholder="返信用メールアドレス [必須]" required="required" data-validation-engine="validate[required,custom[email]]" data-formrun-required>
 					<p class="white form-contact-label hidden">お問い合わせ内容</p>
 					<textarea name="お問い合わせ内容" class="form-control form-white" rows="10" placeholder="お問い合わせ内容 [必須]" required="required" data-validation-engine="validate[required]" data-formrun-required></textarea>
-					<!-- <div class="_formrun_gotcha">
-						<style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
-						<label for="_formrun_gotcha">If you are a human, ignore this field</label>
-						<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
-					</div> -->
 					<div class="g-recaptcha" data-sitekey="your google recapcha site key"></div>
 					<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
-					<input type="submit" value="送信" class="form-control btn btn-submit hidden" id="btnFmSbmt" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">
+					<span class="form-control btn btn-submit hidden" id="btnFmSbmt">送信</span>
 					<span class="btn btn-blue hidden" id="btnFmCrrct">訂正する</span>
-					<div class="hidden" id="fmTnks">
-						<p class="white">正常に送信されました。ありがとうございました。なお、内容によっては返信できかねる場合がございますのでご了承ください。</p>
-					</div>
 				</form>
 			</div>
 		</div>
@@ -158,5 +150,6 @@
 	<script src="https://sdk.form.run/js/v1/sdk.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js?render=6LeEuoYUAAAAAAD48_6g5MmWUiowGN19WZYK2Y-w'></script>
 	<script src="/js/main.js"></script>
+</script>
 </body>
 </html>
