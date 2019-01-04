@@ -714,9 +714,10 @@ header .PRT__typedCursor {
 }
 /*STRUCTURE FOOTER ******************************************/
 footer {
-	padding: 140px 0 40px;
+	padding: 140px 0 60px;
 	background: url('../img/footer.png');
 	background-size: cover;
+  margin-bottom: -60px; /*Google recapchaの位置調整*/
 }
 footer .trial-button {
 	overflow: hidden !important;
@@ -768,7 +769,10 @@ footer .social-footer li a {
 footer .social-footer li:hover a, footer .social-footer li.hover a {
 	color: var(--blue);
 }
-
+.grecaptcha-badge { /*Google recapchaの位置調整*/
+	position: relative !important;
+	right: calc(-100vw + 256px) !important;
+}
 /*Structure INTRO-TABLE ******************************************/
 .ROW-serviceCard {
 	margin-top: -160px;
