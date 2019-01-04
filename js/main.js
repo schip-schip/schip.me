@@ -200,6 +200,7 @@ $( document ).ready( function() {
 		if (resultValidation == true) {
 				$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
 				$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+				$("#form-contact :submit").attr('disabled',false);
 				$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
 				$("#form-contact").validationEngine("updatePromptsPosition");
  		}
@@ -207,11 +208,11 @@ $( document ).ready( function() {
 	$(document).on('click','#btnFmCrrct',function(){
 		$("#form-contact-explain").html("全ての項目を入力してください。");
 		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false);
+		$("#form-contact :submit").attr('disabled',true);
 		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
 		$("#form-contact").validationEngine("updatePromptsPosition");
 	});
 	$(document).on('click','#btnFmSbmt',function(){
-		$('#form-contact').submit();
 		$("#form-contact-explain").html("<br>正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
 		$("#form-contact").addClass("hidden");
 		unlockScroll();
@@ -222,6 +223,7 @@ $( document ).ready( function() {
 			$('#modal-contact').on('hidden.bs.modal', function () {
 				$("#form-contact-explain").html("全ての項目を入力してください。");
 				$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+				$("#form-contact :submit").attr('disabled',true);
 				$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
 				$("#form-contact").removeClass("hidden");
 			})
