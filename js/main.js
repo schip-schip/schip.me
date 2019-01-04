@@ -181,7 +181,6 @@ $( document ).ready( function() {
 
 	// ********************* Modal Contact ********************************************************************************************************************
 	var scrollpos;
-
 	function lockScroll(){
 		scrollpos = $(window).scrollTop();
 		$('body').addClass('fixed-scroll').css({'top': -scrollpos});
@@ -190,23 +189,20 @@ $( document ).ready( function() {
 		$('body').removeClass('fixed-scroll').css({'top': 0});
 		window.scrollTo( 0 , scrollpos );
 	}
-
 	$('body').on('click', '#btn-contact', function() {
 		lockScroll();
 	});
-
 	$('body').on('click', '.modal-popup a.close-link', function() {
 		unlockScroll();
 	});
-
-
 	$(document).on('click','#btnFmCnfm',function(){
-		$("#form-contact").validationEngine('validate')
-		$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
-		$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
-		// $('form').validationEngine('hide');
-		$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-		$("#form-contact").validationEngine("updatePromptsPosition");
+		let resultValidation = $("#form-contact").validationEngine('validate');
+		if (resultValidation == true) {
+				$("#form-contact-explain").html("以下の内容で送信しますが、よろしいですか？");
+				$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',true);
+				$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+				$("#form-contact").validationEngine("updatePromptsPosition");
+ 		}
 	});
 	$(document).on('click','#btnFmCrrct',function(){
 		$("#form-contact-explain").html("全ての項目を入力してください。");
@@ -215,16 +211,21 @@ $( document ).ready( function() {
 		$("#form-contact").validationEngine("updatePromptsPosition");
 	});
 	$(document).on('click','#btnFmSbmt',function(){
-		$("#form-contact-explain").html("正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
+		$('#form-contact').submit();
+		$("#form-contact-explain").html("<br>正常に送信されました。ありがとうございました。<br>なお、内容によっては返信できかねる場合がございますのでご了承ください。");
 		$("#form-contact").addClass("hidden");
 		unlockScroll();
 		setTimeout(function(){
+			// Modalを閉じる（Bootstrapの仕様）
 	  	$('#modal-contact').modal('hide');
-			$("#form-contact-explain").html("全ての項目を入力してください。");
-			$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
-			$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
-			$("#form-contact").removeClass("hidden");
-		},4000);
+			// Modalが閉じたらフォームを初期化する。
+			$('#modal-contact').on('hidden.bs.modal', function () {
+				$("#form-contact-explain").html("全ての項目を入力してください。");
+				$("#form-contact input:not([type='submit']), #form-contact textarea").attr('readonly',false).val('');
+				$(".form-contact-label, #btnFmCnfm, #btnFmSbmt, #btnFmCrrct").toggleClass("hidden");
+				$("#form-contact").removeClass("hidden");
+			})
+		},2000);
 	});
 	// ********************* END OF Modal Contact ********************************************************************************************************************
 });
