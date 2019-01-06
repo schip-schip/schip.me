@@ -8,7 +8,9 @@ body {
 }
 :root{
 	--blue: #0CADF6;
-	--blue_bg: #7dbffa;
+	--blue_bg: #70c7ff;
+	--blue_ribbonDark: #6eb3e0;
+	--gray_bg: #f7f7f7;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @font-face {
@@ -24,7 +26,7 @@ body {
 h1,h2,h3,h4 {
 	margin: 0;
 }
-/** Nornal Text *************************************************************************************/
+/** Text *************************************************************************************/
 p {
 	margin: 16px 0;
 }
@@ -485,7 +487,64 @@ table.ROW-info-table th{
 table.ROW-info-table td{
 	padding: 8px 4px;
 }
-/* UTILITIES ******************************************/
+/***************************************** Paragraph Utilities ******************************************/
+p.question{
+	margin: 48px 0px 32px 0px;
+}
+p.question:before{
+	content: '\f059';
+	display: inline-block;
+	width: 24px;
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	text-indent: 0;
+	margin-right: 8px;
+}
+p.answer{
+	margin-left: 32px;
+}
+p.UTL__answer-fisrt:before {
+	content: '\f18e';
+	display: inline-block;
+	width: 24px;
+	font-family: 'FontAwesome';
+	font-size: 18px;
+	text-indent: 0;
+	margin-right: 8px;
+}
+@media(max-width:992px) {
+	p.answer{
+		margin-left: 0;
+	}
+}
+.PRT__ribbonBox {
+	position: relative;
+	margin: 16px 0;
+	padding: 10px 24px;
+	background: var(--gray_bg);
+	width: calc(100% - 30px);
+	left: 24px;
+}
+.PRT__ribbonBoxRibbon {
+  position: relative;
+  box-sizing: border-box;
+  padding: 6px 6px 6px 28px;
+  margin: 0 0 0 -44px;
+  width: 100%;
+  font-size: 19px;
+  color: white;
+  background: var(--blue_bg);
+}
+.PRT__ribbonBoxRibbon:before {
+    position: absolute;
+    content: '';
+    top: 100%;
+    left: 0;
+    border: none;
+    border-bottom: solid 15px transparent;
+    border-right: solid 20px var(--blue_ribbonDark);
+}
+/* Other Utilities ******************************************/
 .UTL__img100{
 	width: 100%;
 	height: auto;
@@ -522,7 +581,8 @@ table.ROW-info-table td{
   border-top: 4vh solid transparent;
   border-right: 100vw solid white;
 }
-/* STRUCTURE ROW-preloader ******************************************/
+
+/* Common ROW-preloader ******************************************/
 .ROW-preloader {
 	position: fixed;
 	z-index: 9999;
@@ -579,7 +639,7 @@ table.ROW-info-table td{
 .cs-loader-inner label:nth-child(1) {
   animation: lol 1.5s 500ms infinite ease-in-out;
 }
-/* STRUCTURE Navigation Bar ******************************************/
+/* Common Navigation Bar ******************************************/
 .ROW__navbar {
 	top: 50px;
 	position: absolute;
@@ -669,7 +729,7 @@ table.ROW-info-table td{
 	border-bottom: solid 2px var(--blue);
 }
 
-/*STRUCTURE HEADER ******************************************/
+/* Top HEADER ******************************************/
 .ROW-header{
 	position: relative;
 	width: 100vw;
@@ -719,7 +779,7 @@ header .PRT__typedCursor {
     font-size: 46px;
 	}
 }
-/*STRUCTURE FOOTER ******************************************/
+/* Top FOOTER ******************************************/
 footer {
 	padding: 140px 0 60px;
 	background: url('../img/footer.png');
@@ -780,7 +840,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	position: relative !important;
 	right: calc(-100vw + 256px) !important;
 }
-/*Structure INTRO-TABLE ******************************************/
+/* Top INTRO-TABLE ******************************************/
 .ROW-serviceCard {
 	margin-top: -160px;
 	background-color: transparent;
@@ -901,8 +961,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	}
 }*/
 
-/***************************************** PHILOSOPHY **********************************************************************/
-/***************************************************************************************************************************/
+/* Top PHILOSOPHY **********************************************************************/
 .services {
 	margin-top: 40px;
 	margin-bottom: 40px;
@@ -955,9 +1014,7 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 #philosophy.UTL__cutBottom:after {
 	border-right-color: var(--blue_bg);
 }
-/**************************************************************** NEWS ****************************************************************/
-/*********************************************************************************************************************************************/
-
+/* Top NEWS ****************************************************************/
 section#news{
   background: var(--blue_bg);
 	padding-bottom: 64px;
@@ -967,9 +1024,7 @@ section#news{
 	font-family: 'FontAwesome';
 }
 
-/**************************************************************** TEAM ****************************************************************/
-/*********************************************************************************************************************************************/
-
+/* Top TEAM ****************************************************************/
 .team {
 	margin: 80px 0;
 	padding-bottom: 60px;
@@ -1016,29 +1071,7 @@ section#news{
 #btnFmCrrct{
 	margin-top: 30px;
 }
-
-/*****************************************                  branch pages               ******************************************/
-p.question{
-	margin-top: 24px;
-}
-p.question:before{
-	content: '\f059';
-	display: inline-block;
-	width: 24px;
-	font-family: 'FontAwesome';
-	font-size: 18px;
-	text-indent: 0;
-	margin-right: 8px;
-}
-p.answer{
-	margin-left: 32px;
-}
-@media(max-width:992px) {
-	p.answer{
-		margin-left: 0;
-	}
-}
-/***************************************** Anchor 対話篇  ******************************************/
+/* Anchor 対話篇 ******************************************/
 .anchor .nav-tabs > li {
 	border-bottom: none;
 	margin-bottom: -3px;
@@ -1219,7 +1252,7 @@ blockquote {
     padding: 20px 24px 20px 48px;
     box-sizing: border-box;
     font-style: italic;
-    background: #f7f7f7;
+    background: var(--gray_bg);
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
 		margin: 16px 0px 16px 12px;
 }
@@ -1237,7 +1270,7 @@ blockquote:before{
     color: #FFF;
     font-size: 18px;
     line-height: 30px;
-    background: #92d4ff;
+    background: var(--blue_bg);
     box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
 }
 blockquote:after{
@@ -1247,7 +1280,7 @@ blockquote:after{
     left: -15px;
     border: none;
     border-bottom: solid 8px transparent;
-    border-right: solid 15px #6eb3e0;
+    border-right: solid 15px var(--blue_ribbonDark);
 }
 blockquote p {
     position: relative;
