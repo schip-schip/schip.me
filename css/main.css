@@ -46,8 +46,6 @@ p {
 }
 .UTL__headingSubtitle {
 	margin: 64px 0 -60px 0;
-	font-weight: 300;
-	color: #989da0;
 }
 @media(max-width:992px) {
 	body{
@@ -160,8 +158,6 @@ a {
 /** Sturcture **/
 section {
 	position: relative;
-	padding: 40px 0;
-	background: #fff;
 }
 .section-padded {
 	padding: 140px 0 40px;
@@ -185,12 +181,12 @@ section {
 	}
 }
 @media (min-width: 992px){
-.BLK__container {
+	.BLK__container {
     width: 970px;
 	}
 }
 @media (min-width: 768px){
-.BLK__container {
+	.BLK__container {
     width: 750px;
 	}
 }
@@ -579,7 +575,7 @@ p.UTL__answer-fisrt:before {
 }
 .UTL__cutBottom {
   position: relative;
-	padding: 4vh 0;
+  padding: 0 0 4vh 0;
 }
 .UTL__cutBottom:after {
   content: ' ';
@@ -749,6 +745,7 @@ p.UTL__answer-fisrt:before {
   display: flex;
   justify-content: center;
   align-items: center;
+	padding: 12vh 0 4vh 0;
 }
 .ROW-header-topPage{
 	height: 100vh
