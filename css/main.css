@@ -751,7 +751,7 @@ p.UTL__answer-fisrt:before {
   display: flex;
   justify-content: center;
   align-items: center;
-	padding: 12vh 0 4vh 0;
+  padding: calc(102px + 2vh) 0 4vh 0;
 }
 .ROW-header-topPage{
 	height: 100vh
