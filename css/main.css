@@ -16,16 +16,14 @@ body {
 	--red: #D11010;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
-@font-face {
+/* @font-face {
   font-family: 'Sawarabi Mincho';
-  font-style: normal;
-  font-weight: 400;
   src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot);
   src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot?#iefix) format('embedded-opentype'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff2) format('woff2'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff) format('woff'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.ttf) format('truetype');
-} /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */
+} /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */ */
 h1,h2,h3,h4 {
 	margin: 0;
 }
@@ -768,11 +766,13 @@ p.UTL__answer-fisrt:before {
 	font-size: 60px;
 	margin: 18px 0 0 16px; /*カーソル分の視差効果補正で左マージン*/
 	display: inline-block;
+	font-family: "Noto Sans JP";
+	font-weight: 300;
 }
 .PAT__headerTitle__subcopy{
 	font-size: 30px;
 	margin: 8px 0;
-	font-weight: 300;
+	font-weight: 100;
 }
 header .PRT__typedCursor {
 	font-size: 72px;
