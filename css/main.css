@@ -8,9 +8,12 @@ body {
 }
 :root{
 	--blue: #0CADF6;
+	--blue_vivid: #38C3FF;
 	--blue_bg: #70c7ff;
+	--blue_bg_pale: #8DE3FC;
 	--blue_ribbonDark: #6eb3e0;
 	--gray_bg: #f7f7f7;
+	--red: #D11010;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 @font-face {
@@ -95,6 +98,10 @@ p.UTL_broadMargin {
 }
 .UTIL-highlightPink {
 	color: #EC6983;
+}
+.UTL__highlightBlue {
+	background: linear-gradient(transparent 80%, var(--blue_vivid) 60%);
+	font-weight: 600;
 }
 /** ACTION *******************************************************************************************************/
 a {
