@@ -775,8 +775,8 @@ p.UTL__answer-fisrt:before {
 	margin: 8px 0;
 	font-weight: 100;
 }
-	font-size: 72px;
 .PRT__typedCursor {
+	font-size: 72px;
 	margin: 0 8px;
 	color: var(--blue);
 	animation-name: flash;
