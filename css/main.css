@@ -107,6 +107,13 @@ a {
 	color: var(--blue);
 	transition: all 0.3s ease;
 }
+.UTL__exLink:after {
+	font-family: 'FontAwesome';
+	content: '\f14c' !important;
+	font-size: 0.8em;
+  vertical-align: text-top;
+  margin-left: 0.5em;
+}
 .btn {
 	font-size: 18px;
 	display: inline-block;
@@ -1034,10 +1041,10 @@ section#news{
 	padding-bottom: 64px;
 }
 #news span:after{
-	content: '　\f0a9';
 	font-family: 'FontAwesome';
+	content: '\f0a9';
+	margin-left: 0.5em;
 }
-
 /* Top TEAM ****************************************************************/
 .team {
 	margin: 80px 0;
