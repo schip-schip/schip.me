@@ -768,18 +768,19 @@ p.UTL__answer-fisrt:before {
 	display: inline-block;
 	font-family: "Noto Sans JP";
 	font-weight: 300;
+  line-height: 1.0;
 }
 .PAT__headerTitle__subcopy{
 	font-size: 30px;
 	margin: 8px 0;
 	font-weight: 100;
 }
-header .PRT__typedCursor {
 	font-size: 72px;
+.PRT__typedCursor {
 	margin: 0 8px;
 	color: var(--blue);
 	animation-name: flash;
-	animation-duration: 1s;
+	animation-duration: 1.8s;
 	animation-iteration-count: infinite;
 }
 @media(max-width:992px) {
