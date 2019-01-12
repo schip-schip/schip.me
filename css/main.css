@@ -746,8 +746,7 @@ p.UTL__answer-fisrt:before {
 .navbar-nav > li > a.selected {
 	border-bottom: solid 2px var(--blue);
 }
-
-/* Top HEADER ******************************************/
+/* Common HEADER ******************************************/
 .ROW-header{
 	position: relative;
 	width: 100vw;
@@ -760,14 +759,16 @@ p.UTL__answer-fisrt:before {
   align-items: center;
   padding: calc(102px + 2vh) 0 4vh 0;
 }
-.ROW-header-topPage{
-	height: 100vh
-}
 .PRT__headerTitle{
 	font-size: 24px;
 	color: #fff;
 	text-align: center;
 	line-height: 1.5;
+}
+/* Top HEADER ******************************************/
+.ROW-header-topPage{
+	height: 100vh;
+  padding: 100px 0 100px 0;
 }
 .PAT__headerTitle__copy{
 	font-size: 60px;
