@@ -516,7 +516,7 @@ table.ROW-info-table td{
 }
 /***************************************** Paragraph Utilities ******************************************/
 p.question{
-	margin: 48px 0px 32px 0px;
+	margin: 32px 0px 16px 0px;
 }
 p.question:before{
 	content: '\f059';
