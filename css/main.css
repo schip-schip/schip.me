@@ -8,12 +8,17 @@ body {
 }
 :root{
 	--blue: #0CADF6;
+	--blue_pale: #96DFFC;
+	--blue_dark: #03a9f4;
 	--blue_vivid: #38C3FF;
-	--blue_bg: #70c7ff;
-	--blue_bg_pale: #8DE3FC;
+	--blue_ribbon: #70c7ff;
 	--blue_ribbonDark: #6eb3e0;
 	--gray_bg: #f7f7f7;
-	--red: #D11010;
+	--red: #EA3831;
+	--yellow: #F8D805;
+}
+h1,h2,h3,h4 {
+	margin: 0;
 }
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 /* @font-face {
@@ -24,9 +29,7 @@ body {
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff) format('woff'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.ttf) format('truetype');
 } /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */ */
-h1,h2,h3,h4 {
-	margin: 0;
-}
+
 /** Text *************************************************************************************/
 p {
 	margin: 16px 0;
@@ -551,7 +554,7 @@ p.UTL__answer-fisrt:before {
   width: 100%;
   font-size: 19px;
   color: white;
-  background: var(--blue_bg);
+  background: var(--blue_ribbon);
 }
 .PRT__ribbonBoxRibbon:before {
     position: absolute;
@@ -1035,11 +1038,11 @@ footer .social-footer li:hover a, footer .social-footer li.hover a {
 	transform: scale(1);
 }
 #philosophy.UTL__cutBottom:after {
-	border-right-color: var(--blue_bg);
+	border-right-color: var(--blue_dark);
 }
 /* Top NEWS ****************************************************************/
 section#news{
-  background: var(--blue_bg);
+  background: var(--blue_dark);
 	padding-bottom: 64px;
 }
 #news span:after{
@@ -1111,11 +1114,11 @@ section#news{
 }
 .anchor .nav-tabs > li.active > a, .anchor .nav-tabs > li.active > a:hover, .anchor .nav-tabs > li.active > a:focus {
 	color: #fff;
-	background-color: var(--blue_bg);
+	background-color: var(--blue_dark);
 	border: none;
 }
 .setsumon{
-	background-color: var(--blue_bg);
+	background-color: var(--blue_dark);
 	color: #fff;
 }
 .setsumon .container {
@@ -1293,7 +1296,7 @@ blockquote:before{
     color: #FFF;
     font-size: 18px;
     line-height: 30px;
-    background: var(--blue_bg);
+    background: var(--blue_ribbon);
     box-shadow: 0 2px 2px rgba(26, 26, 26, 0.14);
 }
 blockquote:after{
