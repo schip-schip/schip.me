@@ -2,7 +2,6 @@
 body {
 	font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', 'Roboto', 'メイリオ', meiryo, sans-serif;
 	font-size: 18px;
-	line-height: 1.2;
 	color: #424242;
 	overflow-x: hidden;
 }
@@ -20,7 +19,7 @@ body {
 h1,h2,h3,h4 {
 	margin: 0;
 }
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700); */
 /* @font-face {
   font-family: 'Sawarabi Mincho';
   src: url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.eot);
@@ -28,11 +27,12 @@ h1,h2,h3,h4 {
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff2) format('woff2'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.woff) format('woff'),
        url(//fonts.gstatic.com/ea/sawarabimincho/v1/SawarabiMincho-Regular.ttf) format('truetype');
-} /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */ */
+} /* the source is https://googlefonts.github.io/japanese/#sawarabimincho  */
 
 /** Text *************************************************************************************/
 p {
 	margin: 16px 0;
+	line-height: 1.5;
 }
 .heading1 {
 	font-size: 48px;
@@ -72,12 +72,6 @@ p {
 	.UTL__headingSubtitle {
     margin: 54px 0 -54px 0;
 	}
-}
-p.UTL_broadMargin {
-	margin: 48px 0;
-}
-.UTL_spacingParagraph {
-  line-height: 1.5;
 }
 .UTL-broadSpacingPragraph {
 	line-height: 2.2;
@@ -219,6 +213,9 @@ section {
 .flexbox-margin > *{
 	margin-top: 8px;
 	margin-right: 8px;
+}
+.UTL_broadMargin {
+	margin: 48px 0;
 }
 .margin-top-16px{
 	margin-top: 16px;
