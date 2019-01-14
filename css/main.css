@@ -98,6 +98,10 @@ p {
 	background: linear-gradient(transparent 80%, var(--blue_vivid) 60%);
 	font-weight: 600;
 }
+.UTL__highlightRed {
+	background: linear-gradient(transparent 80%, var(--red) 60%);
+	font-weight: 600;
+}
 /** ACTION *******************************************************************************************************/
 a {
 	text-decoration: none;
@@ -110,6 +114,11 @@ a {
 	font-size: 0.8em;
   vertical-align: text-top;
   margin-left: 0.5em;
+}
+.UTL__enLink:after {
+	font-family: 'FontAwesome';
+	content: '\f0a9';
+	margin-left: 0.5em;
 }
 .btn {
 	font-size: 18px;
