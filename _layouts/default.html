@@ -130,6 +130,12 @@
 					<span class="form-control btn btn-submit" id="btnFmCnfm">確認画面へ進む</span>
 					<input type="submit" value="送信" class="form-control btn btn-submit hidden" id="btnFmSbmt" disabled><!--HTMLではなくJqueryによるsubmitに変更するとformrunが機能しなくなるので注意-->
 					<span class="btn btn-blue hidden" id="btnFmCrrct">訂正する</span>
+					<!-- ボット投稿をブロックするためのタグ -->
+					<div class="_formrun_gotcha">
+						<style media="screen">._formrun_gotcha {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style>
+						<label for="_formrun_gotcha">If you are a human, ignore this field</label>
+						<input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+					</div>
 				</form>
 			</div>
 		</div>
